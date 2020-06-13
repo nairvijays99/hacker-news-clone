@@ -2,17 +2,22 @@
   "name": "hacker-news-clone",
   "version": "0.1.0",
   "private": true,
+  "main": "dist/server.js",
   "dependencies": {
+    "@babel/plugin-transform-react-jsx": "^7.10.1",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
+    "axios": "^0.19.2",
+    "express": "^4.17.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.1"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "babel-node ./lib/server.js",
+    "start-ssr": "npm run build && nodemon --exec babel-node ./lib/server.js",
+    "build": "PUBLIC_URL=https://hacker-news-clone-ssr.herokuapp.com/ react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -30,5 +35,24 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.10.1",
+    "@babel/core": "^7.10.2",
+    "@babel/node": "^7.10.1",
+    "@babel/plugin-proposal-class-properties": "^7.10.1",
+    "@babel/preset-env": "^7.10.2",
+    "@babel/preset-react": "^7.10.1",
+    "nodemon": "^2.0.4"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env",
+      "@babel/preset-react"
+    ],
+    "plugins": [
+      "@babel/proposal-class-properties"
+    ]
+  },
+  "homepage": "."
 }
