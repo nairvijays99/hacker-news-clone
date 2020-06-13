@@ -1,68 +1,73 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Hacker News clone assessment
 
-## Available Scripts
+#Context
 
-In the project directory, you can run:
+Hacker News is a community started by Paul Graham for sharing &quot;Anything that good hackers
+would find interesting. That includes more than hacking and startups. If you had to reduce it to a
+sentence, the answer might be: anything that gratifies one&#39;s intellectual curiosity.&quot; Link:
+https://news.ycombinator.com/
 
-### `npm start`
+#Problem Statement
+Create a hacker news clone using React with Server Side Rendering and hydration..
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+#Component Tree Breakdown
+<Shell>
+  <App store={currentPage, articles: [article, article]} >
+    <NewsDashboard>
+      <NewsArticleList {articles}>
+        <NewsArticle {articles[article]}>
+          <Comments {article}>
+          <VoteCount {article}>
+          <UpVote {article}>
+          <Hide {article}>
+          <AuthorName {article}>
+          <AuthorWebsite {article}>
+          <Time {article}>
+          <Title {article}>
+        </NewsArticle>
+        <NewsArticle>...</NewsArticle>
+      </NewsArticleList>
+      <NewsArticleNavigation>
+        <NextPost {currentPage} >
+        <PrevPost {currentPage} >
+      </NewsArticleNavigation>
+      <Graph>TBD</Grapph>
+    </NewsDashboard>
+  </App>
+</Shell>
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+#Server Side Rendering
 
-### `npm test`
+Stage 1:
+1) Users access Hacker-News-Clone dashboard
+2) Express.js server will intercept '/' request
+2) DataFetch module will make an api call
+4) Create a store with raw data and processed the data
+5) Render <App /> to string with store data
+6) Content replacement of <div root> and expose raw data as {initialData} in window scope
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Stage 2:
+1) Respond based on page query
+2) Mem-Cache response
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+#Client Side Rendering
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+Stage 1:
+1) Users access Hacker-News-Clone dashboard
+2) Server responds with initial markup and initial data
+3) Create a store and process initial data
+4) Merge data with local app data (hidden articles, upvotes)
+5) Hydra <App /> with store data
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Stage 2:
+1) Set up Service Worker
+2) Enhancements, SEO & Accessibility
 
-### `npm run eject`
+#Deployment
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+#API's
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Fetch Pages -> https://hn.algolia.com/api/v1/search?tags=story&page=&hitsPerPage=30
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
