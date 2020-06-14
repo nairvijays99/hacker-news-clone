@@ -5,7 +5,7 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 import NewsStoreApi from './NewsStoreApi';
 
-const store = new NewsStoreApi()
+const store = new NewsStoreApi();
 
 if (window.initialState) {
 
@@ -27,6 +27,7 @@ if (window.initialState) {
   // falback if there is no ssr
   // fetch pages api
   store.fetchPage().then((data) => {
+    
     store.setData(data);
     
     // render using fetched data
