@@ -1,26 +1,24 @@
 import axios from 'axios';
 
-const initialData = {
-    articles: {},
-    page: null,
-    upvotes: [],
-    hidden: []
-};
-
 export default class {
 
-  constructor(rawData = false) {
-      if (rawData) this.processRawData(rawData);
+  constructor(initialData) {
+      
+      this.defaultData = {
+        articles: {},
+        page: null,
+        upvotes: [],
+        hidden: []
+    }
+
+    this.data = {...initialData} || {...this.defaultData};
   }
 
   fetchPage = (page = 0) => {
     return axios
     .get(`https://hn.algolia.com/api/v1/search?tags=story&page=${page}&hitsPerPage=30`)
     .then((resp) => {
-        return {
-            processedData: this.processRawData(resp.data),
-            rawData: resp.data
-        }
+        return this.processRawData(resp.data)
     });
   }
 
@@ -44,10 +42,6 @@ export default class {
         return acc;
 
     }, {});
-
-    if (!this.data) {
-        this.data = {...initialData};
-    }
 
     this.data.articles = articles;
     this.data.page = rawData.page;
