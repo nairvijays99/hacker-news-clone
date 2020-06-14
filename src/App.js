@@ -6,9 +6,11 @@ import './App.css';
 function App(props) {
 
   return (
-    <NewsProvider store={props.store}>
-      <NewsDashboard />
-    </NewsProvider>
+    <div id="app">
+      <NewsProvider store={props.store}>
+        <NewsDashboard />
+      </NewsProvider>
+    </div>
   );
 }
 
