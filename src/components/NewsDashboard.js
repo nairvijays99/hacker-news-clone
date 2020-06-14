@@ -4,7 +4,7 @@ import NewsGraph from './NewsGraph';
 
 export default function NewsDashboard() {
     return (
-        <div id="dashboard">
+        <div className="news-dashboard">
             <NewsArticleList />
             <NewsGraph />
         </div>

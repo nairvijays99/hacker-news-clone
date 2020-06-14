@@ -1,9 +1,9 @@
-import React from 'react'
+import React from 'react';
 
 export default function ArticleTitle(props) {
     return (
-        <div>
+        <h3 className='article-title'>
             {props.value}
-        </div>
+        </h3>
     )
 }

@@ -11,12 +11,14 @@
     "@babel/plugin-transform-react-jsx": "^7.10.1",
     "@babel/preset-env": "^7.10.2",
     "@babel/preset-react": "^7.10.1",
+    "@babel/register": "^7.10.1",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
     "axios": "^0.19.2",
     "compression": "^1.7.4",
     "express": "^4.17.1",
+    "ignore-styles": "^5.0.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.1"
@@ -24,6 +26,7 @@
   "scripts": {
     "start": "babel-node ./lib/server.js",
     "start-local": "npm run build-local && babel-node ./lib/server.js",
+    "start-dev": "react-scripts start",
     "dev": "nodemon --exec babel-node ./lib/server.js --watch",
     "build": "PUBLIC_URL=https://hacker-news-clone-ssr.herokuapp.com/ react-scripts build",
     "build-local": "PUBLIC_URL=http://localhost:3001/ react-scripts build",
