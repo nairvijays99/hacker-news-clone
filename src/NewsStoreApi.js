@@ -11,7 +11,11 @@ export default class {
         hidden: []
     }
 
-    this.data = {...initialData} || {...this.defaultData};
+    this.data = {...this.defaultData};
+  }
+
+  setData = (initialData) => {
+    this.data = {...initialData};
   }
 
   fetchPage = (page = 0) => {
