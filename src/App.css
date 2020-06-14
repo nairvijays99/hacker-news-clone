@@ -21,10 +21,18 @@ button {
     border: 1px solid var(--grey-700);
     padding: 5px 8px;
 }
+
+.news-dashboard {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+}
     
 .news-article-list {
     background-color: var(--grey-100);
     border-top: 3px solid var(--orange-800);
+    height: calc(100% - 150px);
+    overflow-y: scroll;
 }
 
 body {
@@ -44,6 +52,10 @@ body {
 
 .news-article:nth-child(even) {
     background-color: var(--grey-200);
+}
+
+.news-article:last-child {
+    margin-bottom: 50px;
 }
 
 .article-url {
@@ -118,3 +130,7 @@ body {
     flex-basis: 20%;
 }
 
+.news-graph {
+    height: 20%;
+    background: var(--grey-700);
+}
