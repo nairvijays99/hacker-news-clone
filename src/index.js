@@ -10,7 +10,7 @@ const store = new NewsStoreApi()
 if (window.initialState) {
 
   // create a store api with initial data
-  let storeData = store.setData(window.initialState);
+  store.setData(window.initialState);
 
   // clean up initialState
   delete window.initialState;
@@ -18,7 +18,7 @@ if (window.initialState) {
   // hydrate using server rendered data
   ReactDOM.hydrate(
     <React.StrictMode>
-      <App store={storeData}/>
+      <App store={store.data}/>
     </React.StrictMode>,
     document.getElementById('root')
   );
@@ -26,12 +26,13 @@ if (window.initialState) {
 } else {
   // falback if there is no ssr
   // fetch pages api
-  store.fetchPage().then((storeData) => {
+  store.fetchPage().then((data) => {
+    store.setData(data);
     
     // render using fetched data
     ReactDOM.render(
       <React.StrictMode>
-        <App store={storeData}/>
+        <App store={store.data}/>
       </React.StrictMode>,
       document.getElementById('root')
     );
