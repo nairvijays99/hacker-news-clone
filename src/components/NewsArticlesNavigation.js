@@ -4,10 +4,10 @@ export default function NewsArticlesNavigation() {
     return (
         <div className="news-articles-navigation">
             <div className="news-articles-navigation-previous">
-                <a href="#">Previous</a>
+                <a href="?page=0">Previous</a>
             </div>
-            <div class="news-articles-navigation-next">
-                <a href="#">Next</a>
+            <div className="news-articles-navigation-next">
+                <a href="?page=1">Next</a>
             </div>
         </div>
     )
