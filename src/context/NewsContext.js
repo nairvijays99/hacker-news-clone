@@ -1,19 +1,27 @@
 import React, { createContext, useState, useEffect } from "react";
 import NewsApi from "../api/NewsApi";
 
-
-
+// node wouldn't be happy with window.something here
 let initialState = null;
-
-let votedArticles = "";
-let hiddenArticles = "";
+let upvotes = "";
+let hidden = "";
 
 if (typeof window !== "undefined") {
+  // override the values in browser mode
   initialState = window && window.NewsApiInitialState;
-  votedArticles = localStorage.getItem("upvotes") || "";
-  hiddenArticles = localStorage.getItem("hidden") || "";
+  upvotes = localStorage.getItem("upvotes") || "";
+  hidden = localStorage.getItem("hidden") || "";
 }
 
+// strategies for this app sourced from local store
+let localStrategies = {
+  upvotes: upvotes.split(","),
+  hidden: hidden.split(","),
+};
+
+// initiate api with initialState which will the server rendered state 
+// and strategies which need to be applied before setting new state
+const api = new NewsApi(initialState, localStrategies);
 
 const addStrategy = (strategy, value) => {
   let currentValue = localStorage.getItem(strategy) || "";
@@ -21,13 +29,6 @@ const addStrategy = (strategy, value) => {
   currentValue.push(value);
   localStorage.setItem(strategy, currentValue.join(","));
 }
-
-let localStrategies = {
-  upvotes: votedArticles.split(","),
-  hidden: hiddenArticles.split(","),
-};
-
-const api = new NewsApi(initialState, localStrategies);
 
 // create a centralised state for News
 export const NewsContext = createContext();
@@ -45,15 +46,11 @@ export const NewsProvider = (props) => {
 
   const upVote = (articleId) => {
     api.upVote(articleId);
-
-    //save to local storage
     addStrategy("upvotes",  articleId);
   };
 
   const hide = (articleId) => {
     api.hide(articleId);
-
-    //save to local storage
     addStrategy("hidden",  articleId);
   };
 

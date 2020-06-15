@@ -29,7 +29,7 @@
     "start-dev": "react-scripts start",
     "dev": "nodemon --exec babel-node ./lib/server.js --watch",
     "build": "PUBLIC_URL=https://hacker-news-clone-ssr.herokuapp.com/ react-scripts build",
-    "build-local": "PUBLIC_URL=http://localhost:3001/ react-scripts build",
+    "build-local": "PUBLIC_URL=http://localhost:3001/ NODE_ENV=development react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
