@@ -23,7 +23,7 @@ const INITIAL_PARAMS = {
 };
 
 class NewsApi {
-  constructor(state) {
+  constructor(state, strategies) {
     // set the initial state of the application
     this.state = { ...INITIAL_STATE };
 
@@ -40,6 +40,8 @@ class NewsApi {
     // set newly passed state
     this.setState(state);
 
+    this.strategies = strategies;
+
     return this;
   }
 
@@ -55,7 +57,7 @@ class NewsApi {
     Object.assign(this.state, { ...state });
 
     // check for any user values in local storage and apply strategies on state
-    this.applyLocalStorageStrategies();
+    this.applyStrategies();
 
     // let all subscribers know about the state change
     this.publish();
@@ -92,6 +94,36 @@ class NewsApi {
     });
   }
 
+  upVote(articleId) {
+
+    //replace this with actual api call
+
+    let newState = {...this.state};
+    newState.articles[articleId].votes += 1;
+    newState.articles[articleId].voted = true;
+
+    if (this.strategies && this.strategies.upvotes) {
+      this.strategies.upvotes.push(articleId);
+    }
+
+    this.setState(newState);
+  }
+
+  hide(articleId) {
+
+    //replace this with actual api call
+
+    let newState = {...this.state};
+    newState.articles[articleId].hidden = true;
+
+    if (this.strategies && this.strategies.hidden) {
+      this.strategies.hidden.push(articleId);
+    }
+
+    this.setState(newState);
+    
+  }
+
   processArticles = (rawData) => {
     return rawData.hits.reduce((articles, article) => {
       let articleData = {
@@ -111,32 +143,11 @@ class NewsApi {
     }, {});
   };
 
-  getWindowContext() {
-    if (typeof window !== "undefined") {
-      return window;
-    } else {
-      return null;
-    }
-  }
-
-  getLocalStorage() {
-    if (!this.getWindowContext() || !this.getWindowContext().localStorage) {
-      return null;
-    } else {
-      return this.getWindowContext().localStorage;
-    }
-  }
-
-  applyLocalStorageStrategies() {
+  applyStrategies() {
     // upvotes, hide etc will be save on the client machine
     // ideally this should be part of api.post(), but storing it locally for this example
 
-    if (!this.getLocalStorage()) {
-      return null;
-    }
-
-    let localStorage = this.getLocalStorage();
-    let strategies = localStorage.getItem("NewsApiStrategies");
+    let strategies = this.strategies;
 
     if (!strategies) {
       return;
@@ -146,12 +157,13 @@ class NewsApi {
     let upVotedArticles = strategies.upvotes || [];
 
     Object.values(this.state.articles).forEach((article) => {
-      if (hiddenArticles.match(article.id)) {
+      if (hiddenArticles.indexOf(article.id) !== -1) {
         article.hidden = true;
       }
 
-      if (upVotedArticles.match(article.id)) {
+      if (upVotedArticles.indexOf(article.id) !== -1) {
         article.voted = true;
+        article.votes += 1;
       }
     });
   }

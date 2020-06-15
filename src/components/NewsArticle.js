@@ -21,10 +21,10 @@ export default function NewsArticle(props) {
             <ArticleUrl value={article.url} />
             <ArticleAuthor value={article.author} />
             <ArticleCreationTime value={article.created_at} />
-            <ArticleUpVote value={article.votes}/>
+            <ArticleUpVote value={article.votes} voted={article.voted} upVote={() => context.upVote(article.id)}/>
             <ArticleVoteCount value={article.votes}/>
             <ArticleComments value={article.comments} />
-            <ArticleHide />
+            <ArticleHide hide={() => context.hide(article.id)}/>
         </div>
     )
 }
