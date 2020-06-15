@@ -148,48 +148,38 @@ class NewsApi {
     // strategy executer methods 
     // method names should map to property value of strategies (upvotes, hidden..)
     const strategyExecuter = {
-
       upvotes(article, strategyName) {
-
-        if(!this.strategies[strategyName]) {
-          return;
-        }
-
-        if (this.strategies[strategyName].indexOf(article.id) !== -1) {
+        let upvotedArticleIds = this.strategies[strategyName];
+        // check if the article is upvoted and the strategy action is not applied
+        if (upvotedArticleIds.indexOf(article.id) !== -1 && !article.voted) {
+          // set the action to true so that this strategy not re-applied
           article.voted = true;
           article.votes += 1;
         }
-
       },
 
-      hidden(article, collection) {
-
-        if (collection.indexOf(article.id) !== -1) {
+      hidden(article, strategyName) {
+        let hiddenArticleIds = this.strategies[strategyName];
+        // check if the article is hidden and the strategy action is not applied
+        if (hiddenArticleIds.indexOf(article.id) !== -1 && !article.hidden) {
+          // set the action to true so that this strategy not re-applied
           article.hidden = true;
         }
-
       }
-      
     }
 
     // loop through the articles list which is {"article-a": {...},"article-b": {...}}
     Object.values(this.state.articles).forEach((article) => {
-
       // loop through the this.strategies which is {hidden: ["article-a",...], upvotes: ["artice-b",...]}
       Object.keys(this.strategies).forEach((key) => {
-
         // check if there is an executer for the strategy
         let executer = strategyExecuter[key];
-
         if (typeof executer === "function") {
-
           // ex: strategyExecuter.hidden matches since we have declared one in strategyExecuter
           // pass the article and values for which the strategy needs to be applied
           executer.call(this, article, key)
         }
-
-      })
-
+      });
     });
   }
 
