@@ -23,6 +23,18 @@ export const NewsProvider = (props) => {
     api.search({page: page});
   }
 
+  const upVote = (articleId) => {
+    api.upVote(articleId);
+
+    //todo: save to local storage
+  }
+
+  const hide = (articleId) => {
+    api.hide(articleId);
+
+    //todo: save to local storage
+  }
+
   useEffect(() => {
     // subscribe to api changes
     const subscriptionId = api.subscribe(setNewsState);
@@ -54,7 +66,7 @@ export const NewsProvider = (props) => {
   }, [newsState.page, newsState.articles]);
 
   return (
-    <NewsContext.Provider value={{...newsState, setPage}}>
+    <NewsContext.Provider value={{...newsState, setPage, upVote, hide}}>
       {props.children}
     </NewsContext.Provider>
   );

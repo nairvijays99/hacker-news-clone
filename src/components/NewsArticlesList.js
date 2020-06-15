@@ -7,9 +7,13 @@ export default function NewsArticlesList() {
 
   return (
       <div className="news-articles-list">
-        {Object.values(articles).map((article) => (
-          <NewsArticle key={article.id} id={article.id} />
-        ))}
+        {Object.values(articles).map((article) => {
+          if (article.hidden) {
+            return null;
+          }
+
+          return (<NewsArticle key={article.id} id={article.id} />);
+        })}
       </div>
   );
 }

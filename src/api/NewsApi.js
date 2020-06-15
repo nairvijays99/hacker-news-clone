@@ -92,6 +92,28 @@ class NewsApi {
     });
   }
 
+  upVote(articleId) {
+
+    //replace this with actual api call
+
+    let newState = {...this.state};
+    newState.articles[articleId].votes += 1;
+    newState.articles[articleId].voted = true;
+
+    this.setState(newState);
+  }
+
+  hide(articleId) {
+
+    //replace this with actual api call
+
+    let newState = {...this.state};
+    newState.articles[articleId].hidden = true;
+
+    this.setState(newState);
+    
+  }
+
   processArticles = (rawData) => {
     return rawData.hits.reduce((articles, article) => {
       let articleData = {
