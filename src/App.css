@@ -6,6 +6,7 @@
     --grey-700: #616161;
     --grey-900: #212121;
     --orange-800: #ef6c00;
+    --orange-900: #e65100;
     --orange-50: #fff3e0;
 }
 
@@ -39,7 +40,7 @@ button {
 .news-articles-list-wrapper {
     border-top: 3px solid var(--orange-800);
     background-color: var(--grey-100);
-    height: calc(100% - 150px);
+    height: 80%;
     overflow-y: scroll;
 }
     
@@ -52,14 +53,14 @@ button {
     top: 0;
     left: 0;
     right: 0;
-    background-color: var(--orange-800);
+    background-color: var(--orange-900);
     height: 50px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     font-size: 15px;
     font-weight: bold;
-    opacity: .90;
+    opacity: .95;
 }
 
 .news-articles-navigation a {
@@ -174,5 +175,10 @@ button {
 
 .news-graph {
     height: 20%;
-    background: var(--grey-700);
+    background: black;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
 }

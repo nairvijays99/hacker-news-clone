@@ -22,11 +22,11 @@ export default function NewsArticlesNavigation() {
     return (
         <div className="news-articles-navigation">
             <div className="news-articles-navigation-previous">
-                {(prevPage >= 0) && (<a href={`/page/${prevPage}`} onClick={handlePrevPageClick}>Previous</a>)}
+                {(prevPage >= 0) && (<a href={`/page/${prevPage}`} title="Next Page" onClick={handlePrevPageClick}>Previous</a>)}
             </div>
             
             <div className="news-articles-navigation-next">
-                <a href={`/page/${nextPage}`} onClick={handleNextPageClick}>Next</a>
+                <a href={`/page/${nextPage}`}  title="Prev Page" onClick={handleNextPageClick}>Next</a>
             </div>
         </div>
     )

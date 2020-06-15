@@ -40,7 +40,7 @@ class NewsApi {
     // set newly passed state
     this.setState(state);
 
-    this.strategies = strategies;
+    this.strategies = strategies || {};
 
     return this;
   }
@@ -95,37 +95,33 @@ class NewsApi {
   }
 
   upVote(articleId) {
-
-    //replace this with actual api call
-
-    let newState = {...this.state};
-    newState.articles[articleId].votes += 1;
-    newState.articles[articleId].voted = true;
-
-    if (this.strategies && this.strategies.upvotes) {
-      this.strategies.upvotes.push(articleId);
-    }
-
-    this.setState(newState);
+    //setting a strategy pending actual API implementation
+    //remove the below code and replace with actual api post call
+    this.setStrategy('upvotes', articleId);
   }
 
   hide(articleId) {
+    //setting a strategy pending actual API implementation
+    //remove the below code and replace with actual api post call
+    this.setStrategy('hidden', articleId);
+  }
 
-    //replace this with actual api call
-
+  setStrategy(strategyName, value) {
     let newState = {...this.state};
-    newState.articles[articleId].hidden = true;
 
-    if (this.strategies && this.strategies.hidden) {
-      this.strategies.hidden.push(articleId);
+    if(!this.strategies[strategyName]) {
+      this.strategies[strategyName] = [];
     }
 
+    this.strategies[strategyName].push(value);
     this.setState(newState);
-    
   }
 
   processArticles = (rawData) => {
+
+    // junk data in.. clean data out..
     return rawData.hits.reduce((articles, article) => {
+
       let articleData = {
         author: article.author,
         comments: article.num_comments,
@@ -134,37 +130,66 @@ class NewsApi {
         id: article.objectID,
         title: article.title,
         votes: article.points,
+        voted: false,
         url: article.url,
       };
 
       articles[articleData.id] = articleData;
 
       return articles;
+
     }, {});
   };
 
   applyStrategies() {
-    // upvotes, hide etc will be save on the client machine
-    // ideally this should be part of api.post(), but storing it locally for this example
+    // upvotes, hide etc will be saved on the client machine
+    // ideally this should be part of api.post()
 
-    let strategies = this.strategies;
+    // strategy executer methods 
+    // method names should map to property value of strategies (upvotes, hidden..)
+    const strategyExecuter = {
 
-    if (!strategies) {
-      return;
+      upvotes(article, strategyName) {
+
+        if(!this.strategies[strategyName]) {
+          return;
+        }
+
+        if (this.strategies[strategyName].indexOf(article.id) !== -1) {
+          article.voted = true;
+          article.votes += 1;
+        }
+
+      },
+
+      hidden(article, collection) {
+
+        if (collection.indexOf(article.id) !== -1) {
+          article.hidden = true;
+        }
+
+      }
+      
     }
 
-    let hiddenArticles = strategies.hidden || [];
-    let upVotedArticles = strategies.upvotes || [];
-
+    // loop through the articles list which is {"article-a": {...},"article-b": {...}}
     Object.values(this.state.articles).forEach((article) => {
-      if (hiddenArticles.indexOf(article.id) !== -1) {
-        article.hidden = true;
-      }
 
-      if (upVotedArticles.indexOf(article.id) !== -1) {
-        article.voted = true;
-        article.votes += 1;
-      }
+      // loop through the this.strategies which is {hidden: ["article-a",...], upvotes: ["artice-b",...]}
+      Object.keys(this.strategies).forEach((key) => {
+
+        // check if there is an executer for the strategy
+        let executer = strategyExecuter[key];
+
+        if (typeof executer === "function") {
+
+          // ex: strategyExecuter.hidden matches since we have declared one in strategyExecuter
+          // pass the article and values for which the strategy needs to be applied
+          executer.call(this, article, key)
+        }
+
+      })
+
     });
   }
 
