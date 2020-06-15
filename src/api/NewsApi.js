@@ -166,12 +166,14 @@ class NewsApi {
           article.hidden = true;
         }
       }
+
     }
 
     // loop through the articles list which is {"article-a": {...},"article-b": {...}}
     Object.values(this.state.articles).forEach((article) => {
       // loop through the this.strategies which is {hidden: ["article-a",...], upvotes: ["artice-b",...]}
-      Object.keys(this.strategies).forEach((key) => {
+
+      Object.keys(this.strategies || {}).forEach((key) => {
         // check if there is an executer for the strategy
         let executer = strategyExecuter[key];
         if (typeof executer === "function") {
