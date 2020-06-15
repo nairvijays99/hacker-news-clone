@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React from 'react';
 import { NewsProvider } from './context/NewsContext';
 import NewsDashboard from './components/NewsDashboard';
 import './App.css';
@@ -7,7 +7,7 @@ function App(props) {
 
   return (
     <div id="app">
-      <NewsProvider store={props.store}>
+      <NewsProvider serverState={props.serverState}>
         <NewsDashboard />
       </NewsProvider>
     </div>
