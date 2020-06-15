@@ -1,13 +1,32 @@
-import React from 'react'
+import React, {useContext} from 'react';
+import {NewsContext} from '../context/NewsContext';
 
 export default function NewsArticlesNavigation() {
+
+    const context = useContext(NewsContext);
+    const page = context.page;
+
+    const prevPage = page - 1;
+    const nextPage = page + 1;
+
+    const handlePrevPageClick = (e) => {
+        context.setPage(prevPage);
+        e.preventDefault();
+    }
+
+    const handleNextPageClick = (e) => {
+        context.setPage(nextPage);
+        e.preventDefault();
+    }
+
     return (
         <div className="news-articles-navigation">
             <div className="news-articles-navigation-previous">
-                <a href="?page=0">Previous</a>
+                {(prevPage >= 0) && (<a href={`/page/${prevPage}`} onClick={handlePrevPageClick}>Previous</a>)}
             </div>
+            
             <div className="news-articles-navigation-next">
-                <a href="?page=1">Next</a>
+                <a href={`/page/${nextPage}`} onClick={handleNextPageClick}>Next</a>
             </div>
         </div>
     )

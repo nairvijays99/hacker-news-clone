@@ -18,26 +18,23 @@ export const NewsProvider = (props) => {
   // if rendered in server side, the initial state will be passed on as props
   const [newsState, setNewsState] = useState(props.serverState || api.state);
 
+  const setPage = (page) => {
+    window.history.pushState({}, `Page ${page}`, `/page/${page}`);
+    api.search({page: page});
+  }
+
   useEffect(() => {
     // subscribe to api changes
     const subscriptionId = api.subscribe(setNewsState);
 
-    console.log("loaded", newsState);
+    const getPage = () => {
 
-    const getParamFromSearch = () => {
-      let search = window.location.search.substring(1);
+      let pathName = window.location.pathname;
+      let pathArr = pathName.split('/').slice(1);
+      
+      let pageInPath = (pathArr[0] === "page") ? pathArr[1] : false;
 
-      if(!search) {
-        return {};
-      }
-
-      return JSON.parse(
-        '{"' + search.replace(/&/g, '","').replace(/=/g, '":"') + '"}',
-        function (key, value) {
-          return key === "" ? value : decodeURIComponent(value);
-        }
-      );
-
+      return pageInPath || 0;
     }
 
     // client side rendering decisions can be made here
@@ -46,8 +43,7 @@ export const NewsProvider = (props) => {
     if (newsState.page === null) {
       // make an api call to render the initial state of the application
       // todo: read query params from window.location
-      let params = getParamFromSearch();
-      api.search({ page: params.page || 0 });
+      api.search({ page: getPage() });
     }
 
     return () => {
@@ -58,7 +54,7 @@ export const NewsProvider = (props) => {
   }, [newsState.page, newsState.articles]);
 
   return (
-    <NewsContext.Provider value={newsState}>
+    <NewsContext.Provider value={{...newsState, setPage}}>
       {props.children}
     </NewsContext.Provider>
   );
