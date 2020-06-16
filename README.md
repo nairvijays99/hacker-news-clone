@@ -1,18 +1,32 @@
-Hacker News clone assessment
-
-Production: http://hacker-news-clone-ssr.herokuapp.com/
-
-#Context
+#Hacker News Assessment - Publicis Sapient
 
 Hacker News is a community started by Paul Graham for sharing &quot;Anything that good hackers
 would find interesting. That includes more than hacking and startups. If you had to reduce it to a
-sentence, the answer might be: anything that gratifies one&#39;s intellectual curiosity.&quot; Link:
-https://news.ycombinator.com/
+sentence, the answer might be: anything that gratifies one&#39;s intellectual curiosity.&quot; 
 
-#Problem Statement
+Original Link: [Refernce Application](https://news.ycombinator.com/) 
+
+API: [https://hn.algolia.com/api](https://hn.algolia.com/api)
+
+Latest Deployment: http://hacker-news-clone-ssr.herokuapp.com/
+
+###Usage:
+
+`npm run dev` to run server development. Need to run `npm run build-local` after client side changes.
+`npm run react` is equivalet to create-react-app's `npm run start`. Ideal for client side development.
+`npm run test` to run integration test.
+`npm run verify-test` to run test coverage.
+`npm run build-local` to build local bundles for client and server
+`npm run serve` to serve the build
+
+
+
+##Problem Statement
+
 Create a hacker news clone using React with Server Side Rendering and hydration..
 
-#Component Tree Breakdown
+###Component Tree Breakdown
+
 <Shell>
   <App store={currentPage, articles: [article, article]} >
     <NewsDashboard>
