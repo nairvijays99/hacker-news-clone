@@ -8,6 +8,7 @@ import {
 } from "victory";
 
 export default function NewsGraph(props) {
+    
   const context = useContext(NewsContext);
   const articles = context.articles;
   const [data, setData] = useState([{ x: 0, y: 0 }]);
@@ -33,17 +34,15 @@ export default function NewsGraph(props) {
   }, [articles]);
 
   return (
-    <div className="news-graph-wrapper">
-      <VictoryGroup data={data} color="#1976d2" height={150}>
-        <VictoryLine />
-        <VictoryScatter size={4} />
-        <VictoryAxis
-          label="Id's"
-          style={{
-            tickLabels: { angle: -90, fontSize: 20 },
-          }}
-        />
-      </VictoryGroup>
-    </div>
+    <VictoryGroup data={data} color="#1976d2" height={150}>
+      <VictoryLine />
+      <VictoryScatter size={4} />
+      <VictoryAxis
+        label="Id's"
+        style={{
+          tickLabels: { angle: -90, fontSize: 20 },
+        }}
+      />
+    </VictoryGroup>
   );
 }
