@@ -25,12 +25,13 @@
     "victory": "^34.3.11"
   },
   "scripts": {
-    "build": "PUBLIC_URL=https://hacker-news-clone-ssr.herokuapp.com/ NODE_ENV=production react-scripts build",
+    "build": "PUBLIC_URL=$PUBLIC_URL react-scripts build",
     "start": "babel-node ./lib/server.js",
     "react": "react-scripts start",
     "server": "nodemon --exec babel-node ./lib/server.js --watch",
     "webpack-dev": "PUBLIC_URL=http://localhost:3001/ NODE_ENV=development react-scripts build",
-    "test": "react-scripts test"
+    "test": "react-scripts test",
+    "verify-test": "npm test-- --coverage"
   },
   "eslintConfig": {
     "extends": "react-app"
