@@ -7,6 +7,6 @@ deploy:
   provider: heroku
   api_key:
     secure: IOQJ28XlS72Ekur2x3cnmRPVJsLivUOi88AaemAg6Iu0/b9yIt/I5NdNIkgdA3+ydhvp4rb3TbQ/yF72+zBeZyfsRw3aX3kjMxtIvw/csf71qlNc87h00WISXbselLJ+xElOEcBP8ptt6+h2HWYad+kdi1Oa933Vcuw14n6YgoINE5LwqhBIxJ6PVkLhNJEJ/5F4IMfOHZ1YoRWKwHNXNB/vkzkbWjr/lV2K3NiyqyonBTBuyhFifi4JT59wy2DIPmI0cR2uM4cTIvkd/rVsQ1axT8FTRNJAKnFAkwZs1oze1oJ0zKt14+LSOpW1gF3m4/9Ir3iFQLLE7jeNlKuRLWeZ/a7I4yVdpBenvJqB0pWmRVg4CItqObS/pa7LEqI2lyBdgLpI/dNoCTFpGF4Au4BytdwtBFVxbu9cxvNa04CFTVF6FSYI40mH017kBkCtq20D0IWU6y9jIPmiKIcQzq6tAfqS4nkkjFcCdDmL4wf7LCBP/rDKGZrzigRKphhXQdCkiusLXwOMuj+BJeXuPVKdNHzWtGoblX3jJ54vShitjt0pLZlTK4pyjxC+RCc0pMiRW5OiNUFR5JDOzSXwHORCgA1+2iZwV0puKVO1RtvYQ24aMiaCfJh6l/DJAefjZRoWXO6SM/JkhkCz+6UbJU40Sk36yC0tH6mA6Vd4nac=
-  app: "$HEROKU_APP"
+  app: $HEROKU_APP
   on:
     branch: master
