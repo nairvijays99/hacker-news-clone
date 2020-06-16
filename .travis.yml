@@ -10,3 +10,4 @@ deploy:
   app: hacker-news-clone-ssr
   on:
     branch: master
+  skip_cleanup: true  
