@@ -10,4 +10,5 @@ deploy:
   provider: heroku
   api_key:
     secure: $HEROKU_KEY
-  app: https://hacker-news-clone-ssr.herokuapp.com/
+  app: $HEROKU_APP
+  on: production
