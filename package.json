@@ -25,14 +25,12 @@
     "victory": "^34.3.11"
   },
   "scripts": {
+    "build": "PUBLIC_URL=https://hacker-news-clone-ssr.herokuapp.com/ NODE_ENV=production react-scripts build",
     "start": "babel-node ./lib/server.js",
-    "start-local": "npm run build-local && babel-node ./lib/server.js",
-    "start-dev": "react-scripts start",
-    "dev": "nodemon --exec babel-node ./lib/server.js --watch",
-    "build": "PUBLIC_URL=https://hacker-news-clone-ssr.herokuapp.com/ react-scripts build",
-    "build-local": "PUBLIC_URL=http://localhost:3001/ NODE_ENV=development react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "react": "react-scripts start",
+    "server": "nodemon --exec babel-node ./lib/server.js --watch",
+    "webpack-dev": "PUBLIC_URL=http://localhost:3001/ NODE_ENV=development react-scripts build",
+    "test": "react-scripts test"
   },
   "eslintConfig": {
     "extends": "react-app"
