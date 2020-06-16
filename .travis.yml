@@ -5,3 +5,9 @@ node_js:
 
 script:
     - npm run build
+
+deploy:
+  provider: heroku
+  api_key:
+    secure: $HEROKU_KEY
+  app: https://hacker-news-clone-ssr.herokuapp.com/
