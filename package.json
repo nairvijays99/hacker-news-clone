@@ -31,7 +31,7 @@
     "server": "nodemon --exec babel-node ./lib/server.js --watch",
     "webpack-dev": "PUBLIC_URL=http://localhost:3001/ NODE_ENV=development react-scripts build",
     "test": "react-scripts test",
-    "verify-test": "npm test-- --coverage"
+    "verify-test": "npm test -- --coverage"
   },
   "eslintConfig": {
     "extends": "react-app"
