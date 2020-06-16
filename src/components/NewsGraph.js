@@ -33,7 +33,7 @@ export default function NewsGraph(props) {
   }, [articles]);
 
   return (
-    <div class="news-graph-wrapper">
+    <div className="news-graph-wrapper">
       <VictoryGroup data={data} color="#1976d2" height={150}>
         <VictoryLine />
         <VictoryScatter size={4} />
