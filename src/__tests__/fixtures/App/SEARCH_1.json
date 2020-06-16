@@ -1,0 +1,1045 @@
+{
+  "hits": [
+    {
+      "created_at": "2019-12-14T16:49:19.000Z",
+      "title": "Having Kids",
+      "url": "http://paulgraham.com/kids.html",
+      "author": "yarapavan",
+      "points": 1992,
+      "story_text": null,
+      "comment_text": null,
+      "num_comments": 863,
+      "story_id": null,
+      "story_title": null,
+      "story_url": null,
+      "parent_id": null,
+      "created_at_i": 1576342159,
+      "_tags": ["story", "author_yarapavan", "story_21790396"],
+      "objectID": "21790396",
+      "_highlightResult": {
+        "title": {
+          "value": "Having Kids",
+          "matchLevel": "none",
+          "matchedWords": []
+        },
+        "url": {
+          "value": "http://paulgraham.com/kids.html",
+          "matchLevel": "none",
+          "matchedWords": []
+        },
+        "author": {
+          "value": "yarapavan",
+          "matchLevel": "none",
+          "matchedWords": []
+        }
+      }
+    },
+    {
+      "created_at": "2014-04-10T13:56:46.000Z",
+      "title": "Drop Dropbox",
+      "url": "http://www.drop-dropbox.com/",
+      "author": "PhilipA",
+      "points": 1990,
+      "story_text": "",
+      "comment_text": null,
+      "num_comments": 1008,
+      "story_id": null,
+      "story_title": null,
+      "story_url": null,
+      "parent_id": null,
+      "created_at_i": 1397138206,
+      "relevancy_score": 5256,
+      "_tags": ["story", "author_PhilipA", "story_7566069"],
+      "objectID": "7566069",
+      "_highlightResult": {
+        "title": {
+          "value": "Drop Dropbox",
+          "matchLevel": "none",
+          "matchedWords": []
+        },
+        "url": {
+          "value": "http://www.drop-dropbox.com/",
+          "matchLevel": "none",
+          "matchedWords": []
+        },
+        "author": {
+          "value": "PhilipA",
+          "matchLevel": "none",
+          "matchedWords": []
+        },
+        "story_text": { "value": "", "matchLevel": "none", "matchedWords": [] }
+      }
+    },
+    {
+      "created_at": "2017-05-13T12:13:44.000Z",
+      "title": "Accidentally Stopping a Global Cyber Attack",
+      "url": "https://www.malwaretech.com/2017/05/how-to-accidentally-stop-a-global-cyber-attacks.html",
+      "author": "pradeepchhetri",
+      "points": 1981,
+      "story_text": null,
+      "comment_text": null,
+      "num_comments": 338,
+      "story_id": null,
+      "story_title": null,
+      "story_url": null,
+      "parent_id": null,
+      "created_at_i": 1494677624,
+      "relevancy_score": 7420,
+      "_tags": ["story", "author_pradeepchhetri", "story_14330547"],
+      "objectID": "14330547",
+      "_highlightResult": {
+        "title": {
+          "value": "Accidentally Stopping a Global Cyber Attack",
+          "matchLevel": "none",
+          "matchedWords": []
+        },
+        "url": {
+          "value": "https://www.malwaretech.com/2017/05/how-to-accidentally-stop-a-global-cyber-attacks.html",
+          "matchLevel": "none",
+          "matchedWords": []
+        },
+        "author": {
+          "value": "pradeepchhetri",
+          "matchLevel": "none",
+          "matchedWords": []
+        }
+      }
+    },
+    {
+      "created_at": "2017-12-19T23:51:17.000Z",
+      "title": "Google Maps' Moat",
+      "url": "https://www.justinobeirne.com/google-maps-moat",
+      "author": "rafaelc",
+      "points": 1960,
+      "story_text": null,
+      "comment_text": null,
+      "num_comments": 609,
+      "story_id": null,
+      "story_title": null,
+      "story_url": null,
+      "parent_id": null,
+      "created_at_i": 1513727477,
+      "relevancy_score": 7850,
+      "_tags": ["story", "author_rafaelc", "story_15965653"],
+      "objectID": "15965653",
+      "_highlightResult": {
+        "title": {
+          "value": "Google Maps' Moat",
+          "matchLevel": "none",
+          "matchedWords": []
+        },
+        "url": {
+          "value": "https://www.justinobeirne.com/google-maps-moat",
+          "matchLevel": "none",
+          "matchedWords": []
+        },
+        "author": {
+          "value": "rafaelc",
+          "matchLevel": "none",
+          "matchedWords": []
+        }
+      }
+    },
+    {
+      "created_at": "2014-02-11T08:12:28.000Z",
+      "title": "Today is The Day We Fight Back",
+      "url": "https://thedaywefightback.org/",
+      "author": "brokenparser",
+      "points": 1958,
+      "story_text": "",
+      "comment_text": null,
+      "num_comments": 258,
+      "story_id": null,
+      "story_title": null,
+      "story_url": null,
+      "parent_id": null,
+      "created_at_i": 1392106348,
+      "relevancy_score": 5149,
+      "_tags": ["story", "author_brokenparser", "story_7216471"],
+      "objectID": "7216471",
+      "_highlightResult": {
+        "title": {
+          "value": "Today is The Day We Fight Back",
+          "matchLevel": "none",
+          "matchedWords": []
+        },
+        "url": {
+          "value": "https://thedaywefightback.org/",
+          "matchLevel": "none",
+          "matchedWords": []
+        },
+        "author": {
+          "value": "brokenparser",
+          "matchLevel": "none",
+          "matchedWords": []
+        },
+        "story_text": { "value": "", "matchLevel": "none", "matchedWords": [] }
+      }
+    },
+    {
+      "created_at": "2015-09-16T13:00:50.000Z",
+      "title": "14-Year-Old Boy Arrested for Bringing Homemade Clock to School",
+      "url": "http://techcrunch.com/2015/09/16/14-year-old-boy-arrested-for-bringing-homemade-clock-to-school/",
+      "author": "ahmad19526",
+      "points": 1952,
+      "story_text": null,
+      "comment_text": null,
+      "num_comments": 870,
+      "story_id": null,
+      "story_title": null,
+      "story_url": null,
+      "parent_id": null,
+      "created_at_i": 1442408450,
+      "relevancy_score": 6264,
+      "_tags": ["story", "author_ahmad19526", "story_10226196"],
+      "objectID": "10226196",
+      "_highlightResult": {
+        "title": {
+          "value": "14-Year-Old Boy Arrested for Bringing Homemade Clock to School",
+          "matchLevel": "none",
+          "matchedWords": []
+        },
+        "url": {
+          "value": "http://techcrunch.com/2015/09/16/14-year-old-boy-arrested-for-bringing-homemade-clock-to-school/",
+          "matchLevel": "none",
+          "matchedWords": []
+        },
+        "author": {
+          "value": "ahmad19526",
+          "matchLevel": "none",
+          "matchedWords": []
+        }
+      }
+    },
+    {
+      "created_at": "2019-09-12T19:02:53.000Z",
+      "title": "California bans private prisons",
+      "url": "https://www.theguardian.com/us-news/2019/sep/12/california-private-prison-ban-immigration-ice",
+      "author": "anigbrowl",
+      "points": 1952,
+      "story_text": null,
+      "comment_text": null,
+      "num_comments": 595,
+      "story_id": null,
+      "story_title": null,
+      "story_url": null,
+      "parent_id": null,
+      "created_at_i": 1568314973,
+      "_tags": ["story", "author_anigbrowl", "story_20955103"],
+      "objectID": "20955103",
+      "_highlightResult": {
+        "title": {
+          "value": "California bans private prisons",
+          "matchLevel": "none",
+          "matchedWords": []
+        },
+        "url": {
+          "value": "https://www.theguardian.com/us-news/2019/sep/12/california-private-prison-ban-immigration-ice",
+          "matchLevel": "none",
+          "matchedWords": []
+        },
+        "author": {
+          "value": "anigbrowl",
+          "matchLevel": "none",
+          "matchedWords": []
+        }
+      }
+    },
+    {
+      "created_at": "2019-07-08T22:17:47.000Z",
+      "title": "Vulnerability in the Mac Zoom client allows malicious websites to enable camera",
+      "url": "https://medium.com/@jonathan.leitschuh/zoom-zero-day-4-million-webcams-maybe-an-rce-just-get-them-to-visit-your-website-ac75c83f4ef5",
+      "author": "mplanchard",
+      "points": 1937,
+      "story_text": null,
+      "comment_text": null,
+      "num_comments": 456,
+      "story_id": null,
+      "story_title": null,
+      "story_url": null,
+      "parent_id": null,
+      "created_at_i": 1562624267,
+      "relevancy_score": 8939,
+      "_tags": ["story", "author_mplanchard", "story_20387298"],
+      "objectID": "20387298",
+      "_highlightResult": {
+        "title": {
+          "value": "Vulnerability in the Mac Zoom client allows malicious websites to enable camera",
+          "matchLevel": "none",
+          "matchedWords": []
+        },
+        "url": {
+          "value": "https://medium.com/@jonathan.leitschuh/zoom-zero-day-4-million-webcams-maybe-an-rce-just-get-them-to-visit-your-website-ac75c83f4ef5",
+          "matchLevel": "none",
+          "matchedWords": []
+        },
+        "author": {
+          "value": "mplanchard",
+          "matchLevel": "none",
+          "matchedWords": []
+        }
+      }
+    },
+    {
+      "created_at": "2019-04-26T10:35:21.000Z",
+      "title": "Google Is Eating Our Mail",
+      "url": "https://www.tablix.org/~avian/blog/archives/2019/04/google_is_eating_our_mail/",
+      "author": "saintamh",
+      "points": 1931,
+      "story_text": null,
+      "comment_text": null,
+      "num_comments": 685,
+      "story_id": null,
+      "story_title": null,
+      "story_url": null,
+      "parent_id": null,
+      "created_at_i": 1556274921,
+      "relevancy_score": 8791,
+      "_tags": ["story", "author_saintamh", "story_19756125"],
+      "objectID": "19756125",
+      "_highlightResult": {
+        "title": {
+          "value": "Google Is Eating Our Mail",
+          "matchLevel": "none",
+          "matchedWords": []
+        },
+        "url": {
+          "value": "https://www.tablix.org/~avian/blog/archives/2019/04/google_is_eating_our_mail/",
+          "matchLevel": "none",
+          "matchedWords": []
+        },
+        "author": {
+          "value": "saintamh",
+          "matchLevel": "none",
+          "matchedWords": []
+        }
+      }
+    },
+    {
+      "created_at": "2020-05-27T23:09:10.000Z",
+      "title": "The Day AppGet Died",
+      "url": "https://keivan.io/the-day-appget-died/",
+      "author": "lostmsu",
+      "points": 1930,
+      "story_text": null,
+      "comment_text": null,
+      "num_comments": 536,
+      "story_id": null,
+      "story_title": null,
+      "story_url": null,
+      "parent_id": null,
+      "created_at_i": 1590620950,
+      "_tags": ["story", "author_lostmsu", "story_23331287"],
+      "objectID": "23331287",
+      "_highlightResult": {
+        "title": {
+          "value": "The Day AppGet Died",
+          "matchLevel": "none",
+          "matchedWords": []
+        },
+        "url": {
+          "value": "https://keivan.io/the-day-appget-died/",
+          "matchLevel": "none",
+          "matchedWords": []
+        },
+        "author": {
+          "value": "lostmsu",
+          "matchLevel": "none",
+          "matchedWords": []
+        }
+      }
+    },
+    {
+      "created_at": "2019-04-20T13:50:28.000Z",
+      "title": "Joe Armstrong has died",
+      "url": "https://twitter.com/FrancescoC/status/1119596234166218754",
+      "author": "okket",
+      "points": 1928,
+      "story_text": null,
+      "comment_text": null,
+      "num_comments": 188,
+      "story_id": null,
+      "story_title": null,
+      "story_url": null,
+      "parent_id": null,
+      "created_at_i": 1555768228,
+      "relevancy_score": 8777,
+      "_tags": ["story", "author_okket", "story_19706514"],
+      "objectID": "19706514",
+      "_highlightResult": {
+        "title": {
+          "value": "Joe Armstrong has died",
+          "matchLevel": "none",
+          "matchedWords": []
+        },
+        "url": {
+          "value": "https://twitter.com/FrancescoC/status/1119596234166218754",
+          "matchLevel": "none",
+          "matchedWords": []
+        },
+        "author": { "value": "okket", "matchLevel": "none", "matchedWords": [] }
+      }
+    },
+    {
+      "created_at": "2013-03-13T23:13:29.000Z",
+      "title": "Google Reader shutting down",
+      "url": "http://googleblog.blogspot.com/2013/03/a-second-spring-of-cleaning.html",
+      "author": "knurdle",
+      "points": 1926,
+      "story_text": "",
+      "comment_text": null,
+      "num_comments": 701,
+      "story_id": null,
+      "story_title": null,
+      "story_url": null,
+      "parent_id": null,
+      "created_at_i": 1363216409,
+      "relevancy_score": 4503,
+      "_tags": ["story", "author_knurdle", "story_5371725"],
+      "objectID": "5371725",
+      "_highlightResult": {
+        "title": {
+          "value": "Google Reader shutting down",
+          "matchLevel": "none",
+          "matchedWords": []
+        },
+        "url": {
+          "value": "http://googleblog.blogspot.com/2013/03/a-second-spring-of-cleaning.html",
+          "matchLevel": "none",
+          "matchedWords": []
+        },
+        "author": {
+          "value": "knurdle",
+          "matchLevel": "none",
+          "matchedWords": []
+        },
+        "story_text": { "value": "", "matchLevel": "none", "matchedWords": [] }
+      }
+    },
+    {
+      "created_at": "2018-03-01T16:39:50.000Z",
+      "title": "Machine Learning Crash Course",
+      "url": "https://developers.google.com/machine-learning/crash-course/",
+      "author": "matant",
+      "points": 1926,
+      "story_text": null,
+      "comment_text": null,
+      "num_comments": 222,
+      "story_id": null,
+      "story_title": null,
+      "story_url": null,
+      "parent_id": null,
+      "created_at_i": 1519922390,
+      "relevancy_score": 7984,
+      "_tags": ["story", "author_matant", "story_16493489"],
+      "objectID": "16493489",
+      "_highlightResult": {
+        "title": {
+          "value": "Machine Learning Crash Course",
+          "matchLevel": "none",
+          "matchedWords": []
+        },
+        "url": {
+          "value": "https://developers.google.com/machine-learning/crash-course/",
+          "matchLevel": "none",
+          "matchedWords": []
+        },
+        "author": {
+          "value": "matant",
+          "matchLevel": "none",
+          "matchedWords": []
+        }
+      }
+    },
+    {
+      "created_at": "2011-10-13T01:14:23.000Z",
+      "title": "Rob Pike: Dennis Ritchie has died",
+      "url": "https://plus.google.com/u/2/101960720994009339267/posts/ENuEDDYfvKP?hl=en",
+      "author": "fogus",
+      "points": 1924,
+      "story_text": "",
+      "comment_text": null,
+      "num_comments": 202,
+      "story_id": null,
+      "story_title": null,
+      "story_url": null,
+      "parent_id": null,
+      "created_at_i": 1318468463,
+      "relevancy_score": 3509,
+      "_tags": ["story", "author_fogus", "story_3105526"],
+      "objectID": "3105526",
+      "_highlightResult": {
+        "title": {
+          "value": "Rob Pike: Dennis Ritchie has died",
+          "matchLevel": "none",
+          "matchedWords": []
+        },
+        "url": {
+          "value": "https://plus.google.com/u/2/101960720994009339267/posts/ENuEDDYfvKP?hl=en",
+          "matchLevel": "none",
+          "matchedWords": []
+        },
+        "author": {
+          "value": "fogus",
+          "matchLevel": "none",
+          "matchedWords": []
+        },
+        "story_text": { "value": "", "matchLevel": "none", "matchedWords": [] }
+      }
+    },
+    {
+      "created_at": "2020-03-31T15:25:59.000Z",
+      "title": "Honda bucks industry trend by removing touchscreen controls",
+      "url": "https://www.autocar.co.uk/car-news/motor-shows-geneva-motor-show/honda-bucks-industry-trend-removing-touchscreen-controls",
+      "author": "trenning",
+      "points": 1922,
+      "story_text": null,
+      "comment_text": null,
+      "num_comments": 743,
+      "story_id": null,
+      "story_title": null,
+      "story_url": null,
+      "parent_id": null,
+      "created_at_i": 1585668359,
+      "_tags": ["story", "author_trenning", "story_22738415"],
+      "objectID": "22738415",
+      "_highlightResult": {
+        "title": {
+          "value": "Honda bucks industry trend by removing touchscreen controls",
+          "matchLevel": "none",
+          "matchedWords": []
+        },
+        "url": {
+          "value": "https://www.autocar.co.uk/car-news/motor-shows-geneva-motor-show/honda-bucks-industry-trend-removing-touchscreen-controls",
+          "matchLevel": "none",
+          "matchedWords": []
+        },
+        "author": {
+          "value": "trenning",
+          "matchLevel": "none",
+          "matchedWords": []
+        }
+      }
+    },
+    {
+      "created_at": "2019-04-02T13:43:02.000Z",
+      "title": "I tried creating a web browser, and Google blocked me",
+      "url": "https://blog.samuelmaddock.com/posts/google-widevine-blocked-my-browser/",
+      "author": "smaddock",
+      "points": 1920,
+      "story_text": null,
+      "comment_text": null,
+      "num_comments": 605,
+      "story_id": null,
+      "story_title": null,
+      "story_url": null,
+      "parent_id": null,
+      "created_at_i": 1554212582,
+      "relevancy_score": 8750,
+      "_tags": ["story", "author_smaddock", "story_19553941"],
+      "objectID": "19553941",
+      "_highlightResult": {
+        "title": {
+          "value": "I tried creating a web browser, and Google blocked me",
+          "matchLevel": "none",
+          "matchedWords": []
+        },
+        "url": {
+          "value": "https://blog.samuelmaddock.com/posts/google-widevine-blocked-my-browser/",
+          "matchLevel": "none",
+          "matchedWords": []
+        },
+        "author": {
+          "value": "smaddock",
+          "matchLevel": "none",
+          "matchedWords": []
+        }
+      }
+    },
+    {
+      "created_at": "2020-05-13T16:51:07.000Z",
+      "title": "Let's guess what Google requires in 14 days or they kill our extension",
+      "url": "https://blog.pushbullet.com/2020/05/13/lets-guess-what-google-requires-in-14-days-or-they-kill-our-extension/",
+      "author": "cimnine",
+      "points": 1915,
+      "story_text": null,
+      "comment_text": null,
+      "num_comments": 786,
+      "story_id": null,
+      "story_title": null,
+      "story_url": null,
+      "parent_id": null,
+      "created_at_i": 1589388667,
+      "_tags": ["story", "author_cimnine", "story_23168874"],
+      "objectID": "23168874",
+      "_highlightResult": {
+        "title": {
+          "value": "Let's guess what Google requires in 14 days or they kill our extension",
+          "matchLevel": "none",
+          "matchedWords": []
+        },
+        "url": {
+          "value": "https://blog.pushbullet.com/2020/05/13/lets-guess-what-google-requires-in-14-days-or-they-kill-our-extension/",
+          "matchLevel": "none",
+          "matchedWords": []
+        },
+        "author": {
+          "value": "cimnine",
+          "matchLevel": "none",
+          "matchedWords": []
+        }
+      }
+    },
+    {
+      "created_at": "2015-06-26T14:13:55.000Z",
+      "title": "Same-Sex Marriage Is a Right, Supreme Court Rules",
+      "url": "http://www.nytimes.com/2015/06/27/us/supreme-court-same-sex-marriage.html?emc=edit_na_20150626\u0026nlid=63565976\u0026ref=headline\u0026_r=0",
+      "author": "_hv99",
+      "points": 1905,
+      "story_text": null,
+      "comment_text": null,
+      "num_comments": 1194,
+      "story_id": null,
+      "story_title": null,
+      "story_url": null,
+      "parent_id": null,
+      "created_at_i": 1435328035,
+      "relevancy_score": 6103,
+      "_tags": ["story", "author__hv99", "story_9784470"],
+      "objectID": "9784470",
+      "_highlightResult": {
+        "title": {
+          "value": "Same-Sex Marriage Is a Right, Supreme Court Rules",
+          "matchLevel": "none",
+          "matchedWords": []
+        },
+        "url": {
+          "value": "http://www.nytimes.com/2015/06/27/us/supreme-court-same-sex-marriage.html?emc=edit_na_20150626\u0026nlid=63565976\u0026ref=headline\u0026_r=0",
+          "matchLevel": "none",
+          "matchedWords": []
+        },
+        "author": { "value": "_hv99", "matchLevel": "none", "matchedWords": [] }
+      }
+    },
+    {
+      "created_at": "2019-03-13T10:20:44.000Z",
+      "title": "Spotify to Apple: Time to Play Fair",
+      "url": "https://www.timetoplayfair.com/timeline/",
+      "author": "dmitriid",
+      "points": 1903,
+      "story_text": null,
+      "comment_text": null,
+      "num_comments": 841,
+      "story_id": null,
+      "story_title": null,
+      "story_url": null,
+      "parent_id": null,
+      "created_at_i": 1552472444,
+      "relevancy_score": 8710,
+      "_tags": ["story", "author_dmitriid", "story_19377322"],
+      "objectID": "19377322",
+      "_highlightResult": {
+        "title": {
+          "value": "Spotify to Apple: Time to Play Fair",
+          "matchLevel": "none",
+          "matchedWords": []
+        },
+        "url": {
+          "value": "https://www.timetoplayfair.com/timeline/",
+          "matchLevel": "none",
+          "matchedWords": []
+        },
+        "author": {
+          "value": "dmitriid",
+          "matchLevel": "none",
+          "matchedWords": []
+        }
+      }
+    },
+    {
+      "created_at": "2018-04-01T12:14:25.000Z",
+      "title": "1.1.1.1: Fast, privacy-first consumer DNS service",
+      "url": "https://blog.cloudflare.com/announcing-1111/",
+      "author": "satysin",
+      "points": 1895,
+      "story_text": null,
+      "comment_text": null,
+      "num_comments": 657,
+      "story_id": null,
+      "story_title": null,
+      "story_url": null,
+      "parent_id": null,
+      "created_at_i": 1522584865,
+      "relevancy_score": 8038,
+      "_tags": ["story", "author_satysin", "story_16727869"],
+      "objectID": "16727869",
+      "_highlightResult": {
+        "title": {
+          "value": "1.1.1.1: Fast, privacy-first consumer DNS service",
+          "matchLevel": "none",
+          "matchedWords": []
+        },
+        "url": {
+          "value": "https://blog.cloudflare.com/announcing-1111/",
+          "matchLevel": "none",
+          "matchedWords": []
+        },
+        "author": {
+          "value": "satysin",
+          "matchLevel": "none",
+          "matchedWords": []
+        }
+      }
+    },
+    {
+      "created_at": "2020-05-07T12:58:40.000Z",
+      "title": "Zoom Acquires Keybase",
+      "url": "https://keybase.io/blog/keybase-joins-zoom",
+      "author": "vikram7",
+      "points": 1879,
+      "story_text": null,
+      "comment_text": null,
+      "num_comments": 700,
+      "story_id": null,
+      "story_title": null,
+      "story_url": null,
+      "parent_id": null,
+      "created_at_i": 1588856320,
+      "_tags": ["story", "author_vikram7", "story_23102430"],
+      "objectID": "23102430",
+      "_highlightResult": {
+        "title": {
+          "value": "Zoom Acquires Keybase",
+          "matchLevel": "none",
+          "matchedWords": []
+        },
+        "url": {
+          "value": "https://keybase.io/blog/keybase-joins-zoom",
+          "matchLevel": "none",
+          "matchedWords": []
+        },
+        "author": {
+          "value": "vikram7",
+          "matchLevel": "none",
+          "matchedWords": []
+        }
+      }
+    },
+    {
+      "created_at": "2017-08-02T15:46:39.000Z",
+      "title": "Launch HN: 70MillionJobs (YC S17) – Job board for people with criminal records",
+      "url": null,
+      "author": "RBBronson123",
+      "points": 1879,
+      "story_text": "Edit: Thank you everyone for the incredible wealth of insightful suggestions. To anyone who wants to continue the conversation, I\u0026#x27;d appreciate your pinging me at richard@70millionjobs.com with your continuing ideas, so we can stay in touch. Many challenges lie ahead for us, but your help will keep us on the right track.\u003cp\u003eAgain, on behalf of all the folks with records trying to get on with their lives, and myself personally, thanks again for your incredible support. Richard\u003cp\u003e-------------------------------------\u003cp\u003eHi HN,\u003cp\u003eMy name is Richard Bronson and I\u0026#x27;m the founder\u0026#x2F;CEO of 70MillionJobs (\u003ca href=\"https:\u0026#x2F;\u0026#x2F;www.70millionjobs.com\" rel=\"nofollow\"\u003ehttps:\u0026#x2F;\u0026#x2F;www.70millionjobs.com\u003c/a\u003e). Our website is the Internet\u0026#x27;s first job board for 70 million Americans—1 in 3 adults—with criminal records.\u003cp\u003eI\u0026#x27;m something of a domain expert in this area because I myself have a criminal record. In the early 1990s, I worked on Wall Street and some of what I did was illegal. For a time I was a partner at the infamous Wolf of Wall Street firm, Stratton Oakmont (Scorcese film). I ended up with a 2 year Federal prison sentence. I was guilty.\u003cp\u003eI experienced first hand how difficult it was to get on with life after going through the \u0026quot;system.\u0026quot; I served as Director at Defy Ventures, a great non-profit in the reentry space, but was interested in a scalable solution to ex-offender unemployment and resultant recidivism. I felt a new, for-profit, tech-based approach was necessary, so I launched 70MillionJobs. We\u0026#x27;re seeking \u0026quot;double bottom-line\u0026quot; returns: make money and do social good.\u003cp\u003eLike most job boards, our business model is based upon employers paying to advertise their jobs. We expect additional revenue to come from municipalities, who spend tens of billions of dollars annually, when someone is rearrested.\u003cp\u003eYou might not be surprised to learn that most formerly incarcerated men and women are petrified to discuss their background with prospective employers. So we created a \u0026quot;safe haven\u0026quot; where all parties knew the score, and applicants could relax knowing that jobs being offered were with companies that accepted their pasts.\u003cp\u003eSince many of our applicants don\u0026#x27;t have a laptop or easy access to the Internet, we send out text alerts they can easily respond to. Because most of these folks have limited work experience and limited formal education, we plan on building a video resume platform to accompany their resumes. In person, many of these folks are respectful, bright and personable, so this will show them at their best.",
+      "comment_text": null,
+      "num_comments": 509,
+      "story_id": null,
+      "story_title": null,
+      "story_url": null,
+      "parent_id": null,
+      "created_at_i": 1501688799,
+      "relevancy_score": 7581,
+      "_tags": ["story", "author_RBBronson123", "story_14911467"],
+      "objectID": "14911467",
+      "_highlightResult": {
+        "title": {
+          "value": "Launch HN: 70MillionJobs (YC S17) – Job board for people with criminal records",
+          "matchLevel": "none",
+          "matchedWords": []
+        },
+        "author": {
+          "value": "RBBronson123",
+          "matchLevel": "none",
+          "matchedWords": []
+        },
+        "story_text": {
+          "value": "Edit: Thank you everyone for the incredible wealth of insightful suggestions. To anyone who wants to continue the conversation, I'd appreciate your pinging me at richard@70millionjobs.com with your continuing ideas, so we can stay in touch. Many challenges lie ahead for us, but your help will keep us on the right track.\u003cp\u003eAgain, on behalf of all the folks with records trying to get on with their lives, and myself personally, thanks again for your incredible support. Richard\u003cp\u003e-------------------------------------\u003cp\u003eHi HN,\u003cp\u003eMy name is Richard Bronson and I'm the founder/CEO of 70MillionJobs (\u003ca href=\"https://www.70millionjobs.com\" rel=\"nofollow\"\u003ehttps://www.70millionjobs.com\u003c/a\u003e). Our website is the Internet's first job board for 70 million Americans—1 in 3 adults—with criminal records.\u003cp\u003eI'm something of a domain expert in this area because I myself have a criminal record. In the early 1990s, I worked on Wall Street and some of what I did was illegal. For a time I was a partner at the infamous Wolf of Wall Street firm, Stratton Oakmont (Scorcese film). I ended up with a 2 year Federal prison sentence. I was guilty.\u003cp\u003eI experienced first hand how difficult it was to get on with life after going through the \u0026quot;system.\u0026quot; I served as Director at Defy Ventures, a great non-profit in the reentry space, but was interested in a scalable solution to ex-offender unemployment and resultant recidivism. I felt a new, for-profit, tech-based approach was necessary, so I launched 70MillionJobs. We're seeking \u0026quot;double bottom-line\u0026quot; returns: make money and do social good.\u003cp\u003eLike most job boards, our business model is based upon employers paying to advertise their jobs. We expect additional revenue to come from municipalities, who spend tens of billions of dollars annually, when someone is rearrested.\u003cp\u003eYou might not be surprised to learn that most formerly incarcerated men and women are petrified to discuss their background with prospective employers. So we created a \u0026quot;safe haven\u0026quot; where all parties knew the score, and applicants could relax knowing that jobs being offered were with companies that accepted their pasts.\u003cp\u003eSince many of our applicants don't have a laptop or easy access to the Internet, we send out text alerts they can easily respond to. Because most of these folks have limited work experience and limited formal education, we plan on building a video resume platform to accompany their resumes. In person, many of these folks are respectful, bright and personable, so this will show them at their best.",
+          "matchLevel": "none",
+          "matchedWords": []
+        }
+      }
+    },
+    {
+      "created_at": "2016-01-27T19:23:25.000Z",
+      "title": "Request For Research: Basic Income",
+      "url": "https://blog.ycombinator.com/basic-income",
+      "author": "mattkrisiloff",
+      "points": 1876,
+      "story_text": null,
+      "comment_text": null,
+      "num_comments": 1121,
+      "story_id": null,
+      "story_title": null,
+      "story_url": null,
+      "parent_id": null,
+      "created_at_i": 1453922605,
+      "relevancy_score": 6519,
+      "_tags": ["story", "author_mattkrisiloff", "story_10982340"],
+      "objectID": "10982340",
+      "_highlightResult": {
+        "title": {
+          "value": "Request For Research: Basic Income",
+          "matchLevel": "none",
+          "matchedWords": []
+        },
+        "url": {
+          "value": "https://blog.ycombinator.com/basic-income",
+          "matchLevel": "none",
+          "matchedWords": []
+        },
+        "author": {
+          "value": "mattkrisiloff",
+          "matchLevel": "none",
+          "matchedWords": []
+        }
+      }
+    },
+    {
+      "created_at": "2018-05-08T17:51:44.000Z",
+      "title": "Google Duplex: An AI System for Accomplishing Real World Tasks Over the Phone",
+      "url": "https://ai.googleblog.com/2018/05/duplex-ai-system-for-natural-conversation.html",
+      "author": "ivank",
+      "points": 1875,
+      "story_text": null,
+      "comment_text": null,
+      "num_comments": 750,
+      "story_id": null,
+      "story_title": null,
+      "story_url": null,
+      "parent_id": null,
+      "created_at_i": 1525801904,
+      "relevancy_score": 8119,
+      "_tags": ["story", "author_ivank", "story_17022963"],
+      "objectID": "17022963",
+      "_highlightResult": {
+        "title": {
+          "value": "Google Duplex: An AI System for Accomplishing Real World Tasks Over the Phone",
+          "matchLevel": "none",
+          "matchedWords": []
+        },
+        "url": {
+          "value": "https://ai.googleblog.com/2018/05/duplex-ai-system-for-natural-conversation.html",
+          "matchLevel": "none",
+          "matchedWords": []
+        },
+        "author": { "value": "ivank", "matchLevel": "none", "matchedWords": [] }
+      }
+    },
+    {
+      "created_at": "2019-09-04T11:59:36.000Z",
+      "title": "Google’s GDPR Workaround",
+      "url": "https://brave.com/google-gdpr-workaround/",
+      "author": "donohoe",
+      "points": 1868,
+      "story_text": null,
+      "comment_text": null,
+      "num_comments": 588,
+      "story_id": null,
+      "story_title": null,
+      "story_url": null,
+      "parent_id": null,
+      "created_at_i": 1567598376,
+      "relevancy_score": 9046,
+      "_tags": ["story", "author_donohoe", "story_20876248"],
+      "objectID": "20876248",
+      "_highlightResult": {
+        "title": {
+          "value": "Google’s GDPR Workaround",
+          "matchLevel": "none",
+          "matchedWords": []
+        },
+        "url": {
+          "value": "https://brave.com/google-gdpr-workaround/",
+          "matchLevel": "none",
+          "matchedWords": []
+        },
+        "author": {
+          "value": "donohoe",
+          "matchLevel": "none",
+          "matchedWords": []
+        }
+      }
+    },
+    {
+      "created_at": "2017-01-09T14:01:49.000Z",
+      "title": "Atlassian acquires Trello for $425M",
+      "url": "https://techcrunch.com/2017/01/09/atlassian-acquires-trello/",
+      "author": "SwaroopH",
+      "points": 1857,
+      "story_text": null,
+      "comment_text": null,
+      "num_comments": 733,
+      "story_id": null,
+      "story_title": null,
+      "story_url": null,
+      "parent_id": null,
+      "created_at_i": 1483970509,
+      "relevancy_score": 7191,
+      "_tags": ["story", "author_SwaroopH", "story_13356318"],
+      "objectID": "13356318",
+      "_highlightResult": {
+        "title": {
+          "value": "Atlassian acquires Trello for $425M",
+          "matchLevel": "none",
+          "matchedWords": []
+        },
+        "url": {
+          "value": "https://techcrunch.com/2017/01/09/atlassian-acquires-trello/",
+          "matchLevel": "none",
+          "matchedWords": []
+        },
+        "author": {
+          "value": "SwaroopH",
+          "matchLevel": "none",
+          "matchedWords": []
+        }
+      }
+    },
+    {
+      "created_at": "2014-06-12T17:02:33.000Z",
+      "title": "All Our Patent Are Belong To You",
+      "url": "http://www.teslamotors.com/blog/all-our-patent-are-belong-you",
+      "author": "gkoberger",
+      "points": 1855,
+      "story_text": "",
+      "comment_text": null,
+      "num_comments": 315,
+      "story_id": null,
+      "story_title": null,
+      "story_url": null,
+      "parent_id": null,
+      "created_at_i": 1402592553,
+      "relevancy_score": 5377,
+      "_tags": ["story", "author_gkoberger", "story_7884560"],
+      "objectID": "7884560",
+      "_highlightResult": {
+        "title": {
+          "value": "All Our Patent Are Belong To You",
+          "matchLevel": "none",
+          "matchedWords": []
+        },
+        "url": {
+          "value": "http://www.teslamotors.com/blog/all-our-patent-are-belong-you",
+          "matchLevel": "none",
+          "matchedWords": []
+        },
+        "author": {
+          "value": "gkoberger",
+          "matchLevel": "none",
+          "matchedWords": []
+        },
+        "story_text": { "value": "", "matchLevel": "none", "matchedWords": [] }
+      }
+    },
+    {
+      "created_at": "2016-07-21T13:10:58.000Z",
+      "title": "Why I’m Suing the US Government",
+      "url": "https://www.bunniestudios.com/blog/?p=4782",
+      "author": "ivank",
+      "points": 1855,
+      "story_text": null,
+      "comment_text": null,
+      "num_comments": 305,
+      "story_id": null,
+      "story_title": null,
+      "story_url": null,
+      "parent_id": null,
+      "created_at_i": 1469106658,
+      "relevancy_score": 6855,
+      "_tags": ["story", "author_ivank", "story_12136578"],
+      "objectID": "12136578",
+      "_highlightResult": {
+        "title": {
+          "value": "Why I’m Suing the US Government",
+          "matchLevel": "none",
+          "matchedWords": []
+        },
+        "url": {
+          "value": "https://www.bunniestudios.com/blog/?p=4782",
+          "matchLevel": "none",
+          "matchedWords": []
+        },
+        "author": { "value": "ivank", "matchLevel": "none", "matchedWords": [] }
+      }
+    },
+    {
+      "created_at": "2018-01-22T05:52:16.000Z",
+      "title": "Linus Torvalds: “Somebody is pushing complete garbage for unclear reasons.”",
+      "url": "http://lkml.iu.edu/hypermail/linux/kernel/1801.2/04628.html",
+      "author": "Valmar",
+      "points": 1854,
+      "story_text": null,
+      "comment_text": null,
+      "num_comments": 657,
+      "story_id": null,
+      "story_title": null,
+      "story_url": null,
+      "parent_id": null,
+      "created_at_i": 1516600336,
+      "relevancy_score": 7917,
+      "_tags": ["story", "author_Valmar", "story_16202205"],
+      "objectID": "16202205",
+      "_highlightResult": {
+        "title": {
+          "value": "Linus Torvalds: “Somebody is pushing complete garbage for unclear reasons.”",
+          "matchLevel": "none",
+          "matchedWords": []
+        },
+        "url": {
+          "value": "http://lkml.iu.edu/hypermail/linux/kernel/1801.2/04628.html",
+          "matchLevel": "none",
+          "matchedWords": []
+        },
+        "author": {
+          "value": "Valmar",
+          "matchLevel": "none",
+          "matchedWords": []
+        }
+      }
+    },
+    {
+      "created_at": "2016-07-21T00:52:28.000Z",
+      "title": "Master Plan, Part Deux",
+      "url": "https://www.tesla.com/blog/master-plan-part-deux",
+      "author": "arturogarrido",
+      "points": 1851,
+      "story_text": null,
+      "comment_text": null,
+      "num_comments": 677,
+      "story_id": null,
+      "story_title": null,
+      "story_url": null,
+      "parent_id": null,
+      "created_at_i": 1469062348,
+      "relevancy_score": 6855,
+      "_tags": ["story", "author_arturogarrido", "story_12133766"],
+      "objectID": "12133766",
+      "_highlightResult": {
+        "title": {
+          "value": "Master Plan, Part Deux",
+          "matchLevel": "none",
+          "matchedWords": []
+        },
+        "url": {
+          "value": "https://www.tesla.com/blog/master-plan-part-deux",
+          "matchLevel": "none",
+          "matchedWords": []
+        },
+        "author": {
+          "value": "arturogarrido",
+          "matchLevel": "none",
+          "matchedWords": []
+        }
+      }
+    }
+  ],
+  "nbHits": 21278886,
+  "page": 3,
+  "nbPages": 34,
+  "hitsPerPage": 30,
+  "exhaustiveNbHits": false,
+  "query": "",
+  "params": "advancedSyntax=true\u0026analytics=true\u0026analyticsTags=backend\u0026hitsPerPage=30\u0026page=3\u0026tags=story",
+  "processingTimeMS": 3
+}
