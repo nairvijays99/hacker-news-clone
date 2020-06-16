@@ -2,8 +2,8 @@ import "ignore-styles";
 import express from "express";
 import compression from "compression";
 import fs from "fs";
-import NewsApi from "../src/api/NewsApi";
-import App from "../src/App";
+import NewsApi from "../api/NewsApi";
+import App from "../App";
 import React from "react";
 import ReactDOMServer from "react-dom/server";
 
