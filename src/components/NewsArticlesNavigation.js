@@ -5,7 +5,7 @@ export default function NewsArticlesNavigation() {
 
     const context = useContext(NewsContext);
     const page = context.page;
-
+    const pages = context.pages;
     const prevPage = page - 1;
     const nextPage = page + 1;
 
@@ -22,11 +22,11 @@ export default function NewsArticlesNavigation() {
     return (
         <div className="news-articles-navigation">
             <div className="news-articles-navigation-previous">
-                {(prevPage >= 0) && (<a href={`/page/${prevPage}`} title="Next Page" onClick={handlePrevPageClick}>Previous</a>)}
+                {(prevPage >= 0) && (<a href={`/page/${prevPage}`} title="Prev Page" onClick={handlePrevPageClick}>Previous</a>)}
             </div>
             
             <div className="news-articles-navigation-next">
-                <a href={`/page/${nextPage}`}  title="Prev Page" onClick={handleNextPageClick}>Next</a>
+                {(nextPage !== pages) && (<a href={`/page/${nextPage}`}  title="Next Page" onClick={handleNextPageClick}>Next</a>)}
             </div>
         </div>
     )
