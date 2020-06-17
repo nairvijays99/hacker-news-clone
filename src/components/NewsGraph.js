@@ -8,7 +8,6 @@ import {
 } from "victory";
 
 export default function NewsGraph(props) {
-    
   const context = useContext(NewsContext);
   const articles = context.articles;
   const [data, setData] = useState([{ x: 0, y: 0 }]);

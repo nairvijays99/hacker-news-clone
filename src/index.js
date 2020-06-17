@@ -1,1 +1,1 @@
-import './dom/index';
+import "./dom/index";

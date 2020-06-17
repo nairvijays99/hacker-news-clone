@@ -46,7 +46,6 @@ describe("Hacker News", () => {
   });
 
   describe("when the application is loaded", () => {
-
     it("users can see latest collection of news feeds", async (next) => {
       act(() => {
         render(<App />, container);
@@ -228,7 +227,6 @@ describe("Hacker News", () => {
   });
 
   describe("after the application is loaded", () => {
-
     it("users can upvote a news article", async (next) => {
       act(() => {
         render(<App />, container);
@@ -271,16 +269,14 @@ describe("Hacker News", () => {
         hideBtn.dispatchEvent(new MouseEvent("click", { bubbles: true }));
       });
 
-      let newFirstArticle = container.querySelector(".news-article")
-      expect(firstArticle === newFirstArticle).toBe(false)
+      let newFirstArticle = container.querySelector(".news-article");
+      expect(firstArticle === newFirstArticle).toBe(false);
       next();
 
       expect(true).toBe(true);
 
       next();
     });
-
-    
 
     it("users can navigate to the Next page", async (next) => {
       act(() => {
@@ -331,27 +327,19 @@ describe("Hacker News", () => {
           ".news-articles-navigation-previous > a"
         );
 
-
-
         act(() => {
           prevBtn.dispatchEvent(new MouseEvent("click", { bubbles: true }));
         });
 
         setTimeout(() => {
-
           let newArticle = container.querySelector(".news-article");
-          expect(newArticle.innerHTML === firstArticle.innerHTML).toBe(true)
+          expect(newArticle.innerHTML === firstArticle.innerHTML).toBe(true);
           next();
-
         }, 10);
-
       }, 10);
-
-
     });
 
     it("users should not see Next page link in last page", async (next) => {
-    
       act(() => {
         render(<App />, container);
       });
@@ -369,8 +357,7 @@ describe("Hacker News", () => {
 
       // TODO: Temporary workaround. This is not the right way to test async state changes.
       setTimeout(() => {
-
-        expect(nextBtn.href).toContain('page/3');
+        expect(nextBtn.href).toContain("page/3");
 
         act(() => {
           // goto /page/2
@@ -378,13 +365,13 @@ describe("Hacker News", () => {
         });
 
         setTimeout(() => {
-          expect(nextBtn.href).toContain('page/3');
+          expect(nextBtn.href).toContain("page/3");
 
           act(() => {
             // goto /page/3
             nextBtn.dispatchEvent(new MouseEvent("click", { bubbles: true }));
           });
-          
+
           setTimeout(() => {
             // you are in /page/3
             nextBtn = container.querySelector(
@@ -392,14 +379,9 @@ describe("Hacker News", () => {
             );
             expect(nextBtn).toBe(null);
             next();
-
-          }, 20)
-          
+          }, 20);
         }, 20);
-        
-        
       }, 20);
-
     });
   });
 });

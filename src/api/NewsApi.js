@@ -9,7 +9,7 @@ const API_ENDPOINT = "https://hn.algolia.com/api/v1/";
 const INITIAL_STATE = {
   articles: {},
   page: null,
-  pages: null
+  pages: null,
 };
 
 // default params to fetch data for the initial state of the application
@@ -67,54 +67,53 @@ class NewsApi {
   search(search = {}) {
     // extend search from default params
     const params = Object.assign({ ...this.params.search }, search);
-    this.setState({...this.state, loading: true});
+    this.setState({ ...this.state, loading: true });
 
     // wrapping this in a promise chain for the convenience of invocators
     // ex: server.js
     return new Promise((resolve, reject) => {
+      this.agent
+        .get("/search", { params })
+        .then((response) => {
+          let responseData = response.data;
+          let articles = this.processArticles(responseData);
+          let page = responseData.page;
+          let pages = responseData.nbPages;
 
-      this.agent.get("/search", { params }).then((response) => {
-        let responseData = response.data;
-        let articles = this.processArticles(responseData);
-        let page = responseData.page;
-        let pages = responseData.nbPages;
+          // new state creation
+          let newState = { ...this.state };
+          newState.articles = articles;
+          newState.page = page;
+          newState.pages = pages;
+          newState.loading = false;
 
-        // new state creation
-        let newState = {...this.state};
-        newState.articles = articles;
-        newState.page = page;
-        newState.pages = pages;
-        newState.loading = false;
+          // set the new state
+          this.setState(newState);
 
-        // set the new state
-        this.setState(newState);
-
-        resolve(this.state);
-
-      }).catch((err) => {
-
-        reject(err);
-
-      });
+          resolve(this.state);
+        })
+        .catch((err) => {
+          reject(err);
+        });
     });
   }
 
   upVote(articleId) {
     //setting a strategy pending actual API implementation
     //remove the below code and replace with actual api post call
-    this.setStrategy('upvotes', articleId);
+    this.setStrategy("upvotes", articleId);
   }
 
   hide(articleId) {
     //setting a strategy pending actual API implementation
     //remove the below code and replace with actual api post call
-    this.setStrategy('hidden', articleId);
+    this.setStrategy("hidden", articleId);
   }
 
   setStrategy(strategyName, value) {
-    let newState = {...this.state};
+    let newState = { ...this.state };
 
-    if(!this.strategies[strategyName]) {
+    if (!this.strategies[strategyName]) {
       this.strategies[strategyName] = [];
     }
 
@@ -123,10 +122,8 @@ class NewsApi {
   }
 
   processArticles = (rawData) => {
-
     // junk data in.. clean data out..
     return rawData.hits.reduce((articles, article) => {
-
       let articleData = {
         author: article.author,
         comments: article.num_comments,
@@ -142,7 +139,6 @@ class NewsApi {
       articles[articleData.id] = articleData;
 
       return articles;
-
     }, {});
   };
 
@@ -150,7 +146,7 @@ class NewsApi {
     // upvotes, hide etc will be saved on the client machine
     // ideally this should be part of api.post()
 
-    // strategy executer methods 
+    // strategy executer methods
     // method names should map to property value of strategies (upvotes, hidden..)
     const strategyExecuter = {
       upvotes(article, strategyName) {
@@ -170,9 +166,8 @@ class NewsApi {
           // set the action to true so that this strategy not re-applied
           article.hidden = true;
         }
-      }
-
-    }
+      },
+    };
 
     // loop through the articles list which is {"article-a": {...},"article-b": {...}}
     Object.values(this.state.articles).forEach((article) => {
@@ -184,7 +179,7 @@ class NewsApi {
         if (typeof executer === "function") {
           // ex: strategyExecuter.hidden matches since we have declared one in strategyExecuter
           // pass the article and values for which the strategy needs to be applied
-          executer.call(this, article, key)
+          executer.call(this, article, key);
         }
       });
     });
