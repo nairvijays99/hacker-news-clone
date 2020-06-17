@@ -8,6 +8,8 @@
     --orange-800: #ef6c00;
     --orange-900: #e65100;
     --orange-50: #fff3e0;
+    --graph-height: 150px;
+    --nav-height: 50px;
 }
 
 body {
@@ -38,14 +40,18 @@ button {
 }
 
 .news-articles-list-wrapper {
-    border-top: 3px solid var(--orange-800);
     background-color: var(--grey-100);
-    height: 80%;
+
+    height: calc(100% - var(--graph-height)); 
     overflow-y: scroll;
 }
     
 .news-articles-list {
-    margin-top: 50px;
+    margin-top: var(--nav-height);
+}
+
+.news-articles-list-header {
+    display: none;
 }
 
 .news-articles-navigation {
@@ -54,7 +60,7 @@ button {
     left: 0;
     right: 0;
     background-color: var(--orange-900);
-    height: 50px;
+    height: var(--nav-height);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -97,7 +103,7 @@ button {
 }
 
 .news-article:last-child {
-    margin-bottom: 50px;
+    margin-bottom: var(--nav-height);
 }
 
 .article-url {
@@ -111,6 +117,7 @@ button {
     font-size: 16px;
     flex: 0 1 100%;
     order: 0;
+    max-width: 40%;
 }
 
 .article-author {
@@ -174,11 +181,195 @@ button {
 }
 
 .news-graph {
-    height: 20%;
-    background: black;
-    color: white;
+    height: var(--graph-height);
+    background: var(--grey-100);
     position: fixed;
     bottom: 0;
     left: 0;
     right: 0;
+}
+
+@media only screen and (min-width: 1024px) {
+
+    button {
+        border: none;
+        background: none;
+        padding: 0;
+        height: auto;
+    }
+
+    .news-articles-list-wrapper {
+        overflow-y: hidden;
+    }
+
+    .news-articles-navigation {
+        top: calc(100% - 150px - 50px);
+    }
+
+    .news-articles-list-header {
+        display: flex;
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1;
+        background-color: var(--orange-900);
+        color: white;
+        height: 25px;
+    }
+
+    .news-articles-list-header > div {
+        padding: 3px;
+        font-weight: bold;
+    }
+
+    .news-articles-list {
+        margin-top: 0;
+        position: fixed;
+        height: calc(100% - 150px - 50px);
+        overflow-y: scroll;
+        right: 0;
+        left: 0;
+    }
+
+    .news-article {
+        padding: 0;
+        align-items: baseline;
+    }
+
+    .news-article:first-child {
+        margin-top: 25px;
+    }
+
+    .news-articles-navigation {
+        background-color: var(--grey-100);
+        justify-content: flex-end;
+        border-bottom: 3px solid var(--orange-800);
+        box-sizing: border-box;
+    }
+
+    .news-articles-navigation  a {
+        color: var(--orange-900);
+    }
+
+    /* only override order and display styles */
+    .article-comments {
+        order: 1;
+        flex-basis: 8%;
+    }
+
+    .article-vote-count {
+        order: 2;
+        flex-basis: 7%;
+    }
+
+    .article-upvote {
+        order: 3;
+        flex-basis: 7%;
+    }
+
+    .article-title {
+        order: 4;
+        flex-basis: auto;
+    }
+
+    .article-url {
+        order: 5;
+        flex-basis: auto;
+    }
+    
+    .article-author {
+        order: 6;
+        flex-basis: auto;
+    }
+    
+    .article-creation-time {
+        order: 7;
+        flex-basis: auto;
+    }
+    
+    .article-hide {
+        order: 8;
+        flex-basis: auto;
+    }
+
+    .article-details {
+        order: 4;
+        flex-basis: auto;
+    }
+
+    /* hidden in desktop */
+    .news-articles-navigation-next a:after,
+    .news-articles-navigation-previous a:before,
+    .article-comments-siffix,
+    .article-upvote-suffix {
+        display: none;
+    }
+
+    /* other overrides */
+
+    .news-article > * {
+        padding: 3px;;
+    }
+
+    .article-author {
+        margin-right: 0;
+    }
+
+    .article-author-value {
+        font-weight: normal;
+    }
+
+    .article-url {
+        margin: 0;
+    }
+
+    .article-url:before {
+        content: "(";
+    }
+
+    .article-url:after {
+        content: ")";
+    }
+
+    .article-hide button {
+        text-transform: lowercase;
+    }
+
+    .article-hide:before {
+        content: "[";
+    }
+
+    .article-hide:after {
+        content: "]";
+    }
+
+    .article-upvote {
+        text-align: center;
+    }
+
+    .article-vote-count-value {
+        font-weight: normal;
+        margin-bottom: 0;
+    }
+
+    .article-vote-count-siffix {
+        display: none;
+    }
+
+    .article-comments-value {
+        font-weight: normal;
+        margin-bottom: 0;
+    }
+
+    .article-title {
+        font-weight: normal;
+        font-size: 14px;
+    }
+
+    .article-creation-time {
+        margin-right: 0;
+    }
+
+
 }
