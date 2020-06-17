@@ -67,6 +67,7 @@ class NewsApi {
   search(search = {}) {
     // extend search from default params
     const params = Object.assign({ ...this.params.search }, search);
+    this.setState({...this.state, loading: true});
 
     // wrapping this in a promise chain for the convenience of invocators
     // ex: server.js
@@ -83,6 +84,7 @@ class NewsApi {
         newState.articles = articles;
         newState.page = page;
         newState.pages = pages;
+        newState.loading = false;
 
         // set the new state
         this.setState(newState);
