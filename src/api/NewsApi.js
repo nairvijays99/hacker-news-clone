@@ -9,6 +9,7 @@ const API_ENDPOINT = "https://hn.algolia.com/api/v1/";
 const INITIAL_STATE = {
   articles: {},
   page: null,
+  pages: null
 };
 
 // default params to fetch data for the initial state of the application
@@ -75,11 +76,13 @@ class NewsApi {
         let responseData = response.data;
         let articles = this.processArticles(responseData);
         let page = responseData.page;
+        let pages = responseData.nbPages;
 
         // new state creation
         let newState = {...this.state};
         newState.articles = articles;
         newState.page = page;
+        newState.pages = pages;
 
         // set the new state
         this.setState(newState);

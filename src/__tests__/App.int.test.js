@@ -280,28 +280,7 @@ describe("Hacker News", () => {
       next();
     });
 
-    it("users should not see Next page link in last page", async (next) => {
-      act(() => {
-        render(<App />, container);
-      });
-
-      await waitUntil(() => container.querySelector(".news-article"));
-
-      let nextBtn = container.querySelector(
-        ".news-articles-navigation-next > a"
-      );
-
-      act(() => {
-        nextBtn.dispatchEvent(new MouseEvent("click", { bubbles: true }));
-        nextBtn.dispatchEvent(new MouseEvent("click", { bubbles: true }));
-      });
-
-      // TODO: Temporary workaround. This is not the right way to test async state changes.
-      setTimeout(() => {
-        expect(nextBtn).toBe(null);
-        next();
-      }, 100);
-    });
+    
 
     it("users can navigate to the Next page", async (next) => {
       act(() => {
@@ -326,11 +305,101 @@ describe("Hacker News", () => {
         expect(firstArticle === secondPageFirstArticle).toBe(false);
 
         next();
-      }, 100);
+      }, 10);
     });
 
-    it("users can navigate to the Previous page", () => {
-      expect(true).toBe(true);
+    it("users can navigate to the Previous page", async (next) => {
+      act(() => {
+        render(<App />, container);
+      });
+
+      await waitUntil(() => container.querySelector(".news-article"));
+
+      let nextBtn = container.querySelector(
+        ".news-articles-navigation-next > a"
+      );
+
+      let firstArticle = container.querySelector(".news-article");
+
+      act(() => {
+        nextBtn.dispatchEvent(new MouseEvent("click", { bubbles: true }));
+      });
+
+      // TODO: Temporary workaround. This is not the right way to test async state changes.
+      setTimeout(() => {
+        let prevBtn = container.querySelector(
+          ".news-articles-navigation-previous > a"
+        );
+
+
+
+        act(() => {
+          prevBtn.dispatchEvent(new MouseEvent("click", { bubbles: true }));
+        });
+
+        setTimeout(() => {
+
+          let newArticle = container.querySelector(".news-article");
+          expect(newArticle.innerHTML === firstArticle.innerHTML).toBe(true)
+          next();
+
+        }, 10);
+
+      }, 10);
+
+
+    });
+
+    it("users should not see Next page link in last page", async (next) => {
+    
+      act(() => {
+        render(<App />, container);
+      });
+
+      await waitUntil(() => container.querySelector(".news-article"));
+
+      let nextBtn = container.querySelector(
+        ".news-articles-navigation-next > a"
+      );
+
+      act(() => {
+        // goto /page/1
+        nextBtn.dispatchEvent(new MouseEvent("click", { bubbles: true }));
+      });
+
+      // TODO: Temporary workaround. This is not the right way to test async state changes.
+      setTimeout(() => {
+
+        expect(nextBtn.href).toContain('page/3');
+
+        act(() => {
+          // goto /page/2
+          nextBtn.dispatchEvent(new MouseEvent("click", { bubbles: true }));
+        });
+
+        setTimeout(() => {
+          expect(nextBtn.href).toContain('page/3');
+
+          act(() => {
+            // goto /page/3
+            nextBtn.dispatchEvent(new MouseEvent("click", { bubbles: true }));
+          });
+          
+          setTimeout(() => {
+            // you are in /page/3
+            nextBtn = container.querySelector(
+              ".news-articles-navigation-next > a"
+            );
+            expect(nextBtn).toBe(null);
+            next();
+
+          }, 10)
+          
+        }, 10);
+        
+        
+      }, 10);
+
     });
   });
 });
