@@ -32,7 +32,7 @@ Created a single page application using react front-end library and express.js f
 ##Could not be completed
 
 1) Proxy api requests through our http server. The implementation should be straight forward in ```server.js``` and ```NewsApi.js```.
-2) Abstractions. This applies to most modules.
+2) Abstractions and cleanup. This applies to most modules.
 3) Need better approach to test async functionality. More tests
 4) Graph Customisation - Could not match it with markup
 5) useReducers with context
