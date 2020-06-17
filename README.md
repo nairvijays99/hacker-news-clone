@@ -29,12 +29,36 @@ Create a hacker news clone using React with Server Side Rendering and hydration.
 
 Created a single page application using react front-end library and express.js for server side rendering. 
 
+####Completed Features & Integrations
+1) Responsive (Mobile & Desktop experience)
+2) Upvote (cached locally)
+3) Hide (cached locally)
+4) Next (Bookmarkable)
+5) Prev (Bookmarkable)
+6) Graph (Customisation incomplete)
+7) Tests (Happy path integration test. No server side test. No individual units for components. No acceptance tests.)
+8) CI
+9) PWA
+10) SSR
+
+##Stack
+1) React - The main Stack
+2) Express.js - Server
+3) Axios - Async requests for server side and client side
+4) Victory - Graph
+5) babel-node - for runtime transpilation
+6) compression - gzip assets
+7) nock - mock api requests
+
+Tried to keep dependency minimal
+
+
 ##Could not be completed
 
 1) Proxy api requests through our http server. The implementation should be straight forward in ```server.js``` and ```NewsApi.js```.
-2) Abstractions and cleanup. This applies to most modules.
+2) Abstractions (agents, helpers etc) and cleanup. This applies to most modules.
 3) Need better approach to test async functionality. More tests
-4) Graph Customisation - Could not match it with markup
+4) Graph Customisation
 5) useReducers with context
 6) Issues with babel transpiled server code. Running prod server on babel node.
 7) Client side and server side security vularabilities
@@ -43,8 +67,9 @@ Created a single page application using react front-end library and express.js f
 10) Offline mode shows a blank shell. Shell can be customised to show some meaningful data.
 11) Created seperate context for articles
 12) Use useContext in article components
-13) Did not like the test. Though it works it's sloppy. Need better approach to cover async functionality. Could not write tests for Server side
+13) Did not like the test. Though it works it's sloppy. Need better approach to cover async functionality. Could not write tests for Server side.
 14) Deployment of branch builds.
+15) Momoize api response in session (or local store)
 
 
 --------------------------
