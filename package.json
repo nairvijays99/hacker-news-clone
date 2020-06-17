@@ -26,13 +26,13 @@
     "victory": "^34.3.11"
   },
   "scripts": {
-    "build": "PUBLIC_URL=$PUBLIC_URL react-scripts build && npm run build-node",
-    "build-local": "PUBLIC_URL=http://localhost:3001/ NODE_ENV=development react-scripts build && npm run build-node",
+    "build": "PUBLIC_URL=$PUBLIC_URL react-scripts build",
+    "build-local": "PUBLIC_URL=http://localhost:3001/ NODE_ENV=development react-scripts build",
     "build-node": "babel src --out-dir dist",
-    "dev": "nodemon --exec babel-node ./lib/server.js --watch",
+    "dev": "nodemon --exec babel-node ./src/server/index.js --watch",
     "react": "react-scripts start",
-    "serve": "node ./dist/server.js",
-    "start": "babel-node ./lib/server.js",
+    "serve": "node ./dist/server/index.js",
+    "start": "babel-node ./src/server/index.js",
     "test": "react-scripts test",
     "verify-test": "npm test -- --coverage"
   },
