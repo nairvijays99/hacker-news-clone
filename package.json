@@ -31,7 +31,7 @@
     "build-node": "babel src --out-dir dist",
     "dev": "nodemon --exec babel-node ./src/server/index.js --watch",
     "react": "react-scripts start",
-    "serve": "node ./dist/server/index.js",
+    "serve": "babel-node ./dist/server/index.js",
     "start": "babel-node ./src/server/index.js",
     "test": "react-scripts test",
     "verify-test": "npm test -- --coverage"

@@ -10,6 +10,8 @@ API: [https://hn.algolia.com/api](https://hn.algolia.com/api)
 
 Latest Deployment: http://hacker-news-clone-ssr.herokuapp.com/
 
+Since the shell (index.html) is cached by service worker, it's advisable to test ssr either in incognito mode or ```curl https://hacker-news-clone-ssr.herokuapp.com/```. SW applies the default cache-first strategy that react bundles with CRA. 
+
 ###Usage:
 
 `npm run dev` to run server development. Need to run `npm run build-local` after client side changes.
@@ -19,11 +21,33 @@ Latest Deployment: http://hacker-news-clone-ssr.herokuapp.com/
 `npm run build-local` to build local bundles for client and server
 `npm run serve` to serve the build
 
-
-
 ##Problem Statement
 
-Create a hacker news clone using React with Server Side Rendering and hydration..
+Create a hacker news clone using React with Server Side Rendering and hydration.
+
+##Solution
+
+Created a single page application using react front-end library and express.js for server side rendering. 
+
+##Could not be completed
+
+1) Proxy api requests through our http server. The implementation should be straight forward in ```server.js``` and ```NewsApi.js```.
+2) Abstractions and cleanup. This applies to most modules.
+3) Need better approach to test async functionality. More tests
+4) Graph Customisation - Could not match it with markup
+5) useReducers with context
+6) Issues with babel transpiled server code. Running prod server on babel node.
+7) Client side and server side security vularabilities
+8) Added some aria roles for elements
+9) SEO,Accessibility, PWA - No extra effort added. But the scores are pretty good. 
+10) Offline mode shows a blank shell. Shell can be customised to show some meaningful data.
+11) Created seperate context for articles
+12) Use useContext in article components
+13) Did not like the test. Though it works it's sloppy. Need better approach to cover async functionality. Could not write tests for Server side
+14) Deployment of branch builds.
+
+
+--------------------------
 
 ###Component Tree Breakdown
 

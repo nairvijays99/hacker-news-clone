@@ -12,7 +12,7 @@ export default function NewsGraphWrapper() {
 
   return (
     <div className="news-graph">
-      {(render) ? <NewsGraph /> : <p>loading graph...</p>}
+      {render ? <NewsGraph /> : <p>loading graph...</p>}
     </div>
   );
 }

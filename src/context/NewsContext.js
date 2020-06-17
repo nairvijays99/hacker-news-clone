@@ -19,7 +19,7 @@ let localStrategies = {
   hidden: hidden.split(","),
 };
 
-// initiate api with initialState which will the server rendered state 
+// initiate api with initialState which will the server rendered state
 // and strategies which need to be applied before setting new state
 const api = new NewsApi(initialState, localStrategies);
 
@@ -28,7 +28,7 @@ const addStrategy = (strategy, value) => {
   currentValue = currentValue.split(",");
   currentValue.push(value);
   localStorage.setItem(strategy, currentValue.join(","));
-}
+};
 
 // create a centralised state for News
 export const NewsContext = createContext();
@@ -46,14 +46,13 @@ export const NewsProvider = (props) => {
 
   const upVote = (articleId) => {
     api.upVote(articleId);
-    addStrategy("upvotes",  articleId);
+    addStrategy("upvotes", articleId);
   };
 
   const hide = (articleId) => {
     api.hide(articleId);
-    addStrategy("hidden",  articleId);
+    addStrategy("hidden", articleId);
   };
-
 
   useEffect(() => {
     // subscribe to api changes

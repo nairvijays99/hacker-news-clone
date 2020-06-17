@@ -33,7 +33,6 @@ const server = () => {
   // read the static index.html file from the fs
   // marking this as a one time operation
   resolveFileToString("build/index.html").then((markup) => {
-
     // cache the markup string for future requests
     staticMarkup = markup.slice();
 
@@ -63,8 +62,11 @@ const server = () => {
               `window.NewsApiInitialState=${JSON.stringify(state)}`
             );
 
-            //set ssr to true 
-          dynamicMarkup = dynamicMarkup.replace('window.ssr=null', 'window.ssr="true"');
+          //set ssr to true
+          dynamicMarkup = dynamicMarkup.replace(
+            "window.ssr=null",
+            'window.ssr="true"'
+          );
 
           // add dom data to markup
           dynamicMarkup = dynamicMarkup.replace(
@@ -81,12 +83,12 @@ const server = () => {
     app.use(compression());
 
     // handle root requests
-    app.get('/', handlePageRequest);
+    app.get("/", handlePageRequest);
 
-    app.get('/page/:page', handlePageRequest);
+    app.get("/page/:page", handlePageRequest);
 
     // handle static asset requests
-    app.use(express.static('build'));
+    app.use(express.static("build"));
 
     // Start server
     app.listen(PORT, () => {

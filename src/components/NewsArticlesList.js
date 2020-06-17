@@ -6,15 +6,14 @@ export default function NewsArticlesList() {
   const { articles } = useContext(NewsContext);
 
   return (
-      <div className="news-articles-list">
-        {Object.values(articles).map((article) => {
-          
-          if (article.hidden) {
-            return null;
-          }
+    <div className="news-articles-list">
+      {Object.values(articles).map((article) => {
+        if (article.hidden) {
+          return null;
+        }
 
-          return (<NewsArticle key={article.id} id={article.id} />);
-        })}
-      </div>
+        return <NewsArticle key={article.id} id={article.id} />;
+      })}
+    </div>
   );
 }
