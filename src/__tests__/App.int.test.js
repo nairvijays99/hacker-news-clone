@@ -32,7 +32,7 @@ describe("Hacker News", () => {
       // intercept api requests and respond with mock data
       nock("https://hn.algolia.com")
         .get(`/api/v1/search?tags=story&page=${page}&hitsPerPage=30`)
-        .reply(100, mockResponse[page], { "Access-Control-Allow-Origin": "*" });
+        .reply(200, mockResponse[page], { "Access-Control-Allow-Origin": "*" });
     });
 
     container = document.createElement("div");
