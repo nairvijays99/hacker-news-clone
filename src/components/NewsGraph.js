@@ -43,6 +43,15 @@ export default function NewsGraph(props) {
           tickLabels: { angle: -90, fontSize: 20 },
         }}
       />
+      <VictoryAxis
+        dependentAxis
+        label="Votes"
+        style={{
+          tickLabels: { angle: -90, fontSize: 20 },
+        }}
+        tickValues={[]}
+        fixLabelOverlap
+      />
     </VictoryGroup>
   );
 }
