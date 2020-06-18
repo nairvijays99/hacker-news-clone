@@ -111,7 +111,7 @@ in a nutshell..
 2) Server responds with index.html
 3) ./src/dom/index.js #CLIENT_SCRIPT
 4) Checks for ```ssr``` flag in window scope
-6) render(<App />) if it's not server side rendered (```window.ssr=false```)
+6) render(<App />) if it's not server side rendered (```window.ssr=false```) (*thought: ideally render() could update api endpoint to use algolia if running as a client side and default api to use server proxy)
 7) <App /> renders <NewsDashboard /> with <NewsContext /> provider
 8) <NewsContext /> checks for initial state (```window.NewsApiState=false```)
 9) <NewsContext /> trigger a <NewsApi/> fetch call
