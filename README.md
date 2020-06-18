@@ -73,6 +73,7 @@ Tried to keep dependency minimal
 13) Did not like the test. Though it works it's sloppy. Need better approach to cover async functionality. Could not write tests for Server side.
 14) Deployment of branch builds.
 15) Momoize api response in session (or from local store)
+16) Error handling (Server side and client side)
 
 
 ##Server Side Life Cycle
