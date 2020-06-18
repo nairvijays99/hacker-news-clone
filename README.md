@@ -10,7 +10,7 @@ API: [https://hn.algolia.com/api](https://hn.algolia.com/api)
 
 Latest Deployment: http://hacker-news-clone-ssr.herokuapp.com/
 
-Since the shell (index.html) is cached by service worker, it's advisable to test ssr either in incognito mode or ```curl https://hacker-news-clone-ssr.herokuapp.com/```. SW applies the default cache-first strategy that react bundles with CRA. 
+Since the shell (index.html) is cached by service worker, it's advisable to test ssr either in incognito mode or ```curl https://hacker-news-clone-ssr.herokuapp.com/```. SW applies the default cache-first strategy that react bundles with CRA. Performance (first load) is dependent on the api endpoint.
 
 ###Usage:
 
