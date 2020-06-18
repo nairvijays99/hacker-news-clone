@@ -74,6 +74,7 @@ Tried to keep dependency minimal
 14) Deployment of branch builds.
 15) Momoize api response in session (or from local store)
 16) Error boundaries/ Error handling
+...
 
 
 ##Server Side Life Cycle
